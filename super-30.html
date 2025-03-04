@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super 30 Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e40af;
+            --primary-hover: #1e3a8a;
+            --secondary-color: #f59e0b;
+            --secondary-hover: #d97706;
+            --success-color: #10b981;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-dark: #f3f4f6;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 0.5rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .form-container:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .form-header {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        .form-header h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .form-header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .form-body {
+            padding: 30px;
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 18px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-size: 16px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            padding-right: 45px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 14px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .form-footer {
+            text-align: center;
+            padding: 15px 30px;
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .required {
+            color: #ef4444;
+            margin-left: 3px;
+        }
+
+        .form-note {
+            background-color: #fffbeb;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .form-note p {
+            margin: 0;
+            color: #92400e;
+            font-size: 14px;
+        }
+
+        .form-note strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #78350f;
+        }
+
+        /* Responsive Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-container {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Super 30 Batch Registration</h2>
+            <p>100% Scholarship for JEE/NEET Aspirants</p>
+        </div>
+        
+        <div class="form-body">
+            <div class="form-note">
+                <strong>Limited Seats Available!</strong>
+                <p>Only the most deserving candidates will be selected for this prestigious program. Don't miss this golden opportunity!</p>
+            </div>
+            
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdwjMdXbAiwNpeL90O96y4XaaUMBO3Cu1CW5eBiUFlGavyW6A/formResponse" method="POST">
+                <div class="grid grid-2">
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <div class="input-group">
+                            <!-- <i class="fas fa-user"></i> -->
+                            <input type="text" id="name" name="entry.591007344" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <div class="input-group">
+                            <!-- <i class="fas fa-envelope"></i> -->
+                            <input type="email" id="email" name="entry.6308228" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <div class="input-group">
+                            <!-- <i class="fas fa-phone"></i> -->
+                            <input type="tel" id="phone" name="entry.1464536718" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="school">School/College <span class="required">*</span></label>
+                        <div class="input-group">
+                            <!-- <i class="fas fa-school"></i> -->
+                            <input type="text" id="school" name="entry.693017067" class="form-control" placeholder="Enter your school or college name" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="form-group">
+                        <label for="class">Current Class <span class="required">*</span></label>
+                        <div class="input-group">
+                            <!-- <i class="fas fa-graduation-cap"></i> -->
+                            <input type="text" id="class" name="entry.527693847" class="form-control" placeholder="Enter your current class" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="program">Interested Program <span class="required">*</span></label>
+                        <div class="input-group">
+                            <!-- <i class="fas fa-book"></i> -->
+                            <select id="program" name="entry.698573846" class="form-control" required>
+                                <option value="" disabled selected>Select a program</option>
+                                <option value="Super 30 (Medical) - NEET">Super 30 (Medical) - NEET</option>
+                                <option value="Super 30 (JEE) - Engineering">Super 30 (Engineering) - JEE</option>
+                                <option value="Super 30 (15 + 15) - Integrated">Super 30 (15 + 15) - Integrated</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </form>
+        </div>
+        
+        <div class="form-footer">
+            By submitting this form, you agree to participate in the selection process for the Super 30 Batch.
+        </div>
+    </div>
+</body>
+</html>

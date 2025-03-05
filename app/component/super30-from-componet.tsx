@@ -1,3 +1,4 @@
+import { SubmitForm } from '@/lib/action/formAction';
 import { 
     BookOpen, 
     Award, 
@@ -17,12 +18,12 @@ import {
   
 
 
-export default function Super30Form(){
+export default function Super30FormRemoveDoNotUse(){
     return  <section id="register" className=" bg-white">
     <div className="container mx-auto ">
 
       <div className="max-w-3xl mx-auto ">
-        <form  className="bg-gray-50 p-8 px-4 rounded-lg shadow-md">
+        <form action={SubmitForm} className="bg-gray-50 p-8 px-4 rounded-lg shadow-md">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
             <div className="col-span-2 md:col-span-1">
               {/* <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Full Name*</label> */}

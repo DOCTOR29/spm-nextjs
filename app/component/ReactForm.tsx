@@ -28,6 +28,7 @@ const Super30Form = () => {
 
         <form
           action={SubmitForm}
+          target="_parent"
          
           className="space-y-6"
         >

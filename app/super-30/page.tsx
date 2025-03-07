@@ -17,8 +17,6 @@ import {
   Send,
   PartyPopper
 } from 'lucide-react';
-import Super30Form from '../component/super30-from-componet';
-import { OpenRegDialog } from '../component/OpenDialog';
 
 function Page() {
   const [formData, setFormData] = useState({
@@ -54,6 +52,7 @@ function Page() {
       message: ''
     });
   };
+  const urlAnchor = 'https://spmandlalans.com/lp/super-30-coaching/'
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -75,7 +74,12 @@ function Page() {
       </header> */}
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white py-20">
+      {/* <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white py-20"> */}
+      <section
+  className="text-white py-20 bg-cover bg-center"
+  style={{ backgroundImage: "url('https://spmandlalans.com/wp-content/uploads/2025/03/web-super30copy-1.jpg')" }}
+>
+  
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Super-30 Batch: 100% Scholarship for JEE/NEET Aspirants</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">Empowering talented students to achieve their dreams without financial barriers.</p>
@@ -139,7 +143,7 @@ function Page() {
                   </li>
                 </ul>
                 
-                {/* <a href="#register" className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a> */}
+                <a href={`${urlAnchor}#apply-form`} className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a>
               </div>
               <div className="pb-4 m-auto">
                 {/* <OpenRegDialog title={'Apply Now'} variant={'green'} super30={true} /> */}
@@ -168,7 +172,7 @@ function Page() {
                     <span className="text-gray-700">Personalized guidance for maximum performance.</span>
                   </li>
                 </ul>
-                {/* <a href="#register" className="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a> */}
+                <a href={`${urlAnchor}#apply-form`} className="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a>
               </div>
               <div className="pb-4 mt-auto">
                 {/* <OpenRegDialog title={'Apply Now'} variant={'purple'} super30={true} /> */}
@@ -199,7 +203,7 @@ function Page() {
                   </li>
                 </ul>
                 {/* <OpenRegDialog title={'Apply Now'} variant={'navy'} super30={true} /> */}
-                {/* <a href="#register" className="inline-block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a> */}
+                <a href={`${urlAnchor}#apply-form`} className="inline-block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a>
               </div>
               <div className="pb-4 mt-auto">
                 {/* <OpenRegDialog title={'Apply Now'} variant={'blue'} super30={true} /> */}
@@ -362,7 +366,7 @@ function Page() {
             <p className="font-bold">Seats are limited and only the most deserving candidates will be selected for this prestigious program. Don't miss this golden opportunity!</p>
           </div>
           {/* <OpenRegDialog title={'Apply Now'}  super30={true} /> */}
-          {/* <a href="#register" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">Apply Now!</a> */}
+          <a href={`${urlAnchor}#apply-form`} className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">Apply Now!</a>
         </div>
       </section>
 

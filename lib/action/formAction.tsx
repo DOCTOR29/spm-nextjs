@@ -1,5 +1,6 @@
 'use server'
-import { redirect } from "next/navigation";
+import { Replace } from "lucide-react";
+import { permanentRedirect, redirect, RedirectType } from "next/navigation";
 
 export async function SubmitForm(formData: FormData){
 
@@ -15,10 +16,11 @@ export async function SubmitForm(formData: FormData){
     .filter(([, value]) => value !== null && value !== undefined) // Filter out null and undefined values
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value as string)}`) // Cast value to string
     .join('&');
-    console.log(queryString)
-console.log(`https://docs.google.com/forms/d/e/1FAIpQLSdwjMdXbAiwNpeL90O96y4XaaUMBO3Cu1CW5eBiUFlGavyW6A/formResponse?${queryString}`)
+
     await fetch(`https://docs.google.com/forms/d/e/1FAIpQLSdwjMdXbAiwNpeL90O96y4XaaUMBO3Cu1CW5eBiUFlGavyW6A/formResponse?${queryString}`);
 
-    redirect('https://www.spmandlalans.com/lp/thank-you')
+    permanentRedirect('https://www.spmandlalans.com/lp/thank-you?trackingAds=done', 'replace' as RedirectType)
+     // Return a JSON response with the URL
+//    { redirectUrl: "https://www.spmandlalans.com/lp/thank-you" };
 
 }

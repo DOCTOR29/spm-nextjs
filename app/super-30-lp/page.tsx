@@ -18,43 +18,29 @@ import {
   PartyPopper
 } from 'lucide-react';
 
-import { OpenRegDialog } from '../component/OpenDialog';
+// import { OpenRegDialog } from '../component/OpenDialog';
 import Super30Form from '../component/ReactForm';
 
 function Page() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    school: '',
-    grade: '',
-    program: '',
-    message: ''
-  });
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//     phone: '',
+//     school: '',
+//     grade: '',
+//     program: '',
+//     message: ''
+//   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+//     const { name, value } = e.target;
+//     setFormData(prevState => ({
+//       ...prevState,
+//       [name]: value
+//     }));
+//   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    alert('Thank you for your application! We will contact you shortly with further details about the selection process.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      school: '',
-      grade: '',
-      program: '',
-      message: ''
-    });
-  };
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -76,21 +62,21 @@ function Page() {
       </header> */}
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      {/* <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white py-20"> */}
+        {/* <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Super-30 Batch: 100% Scholarship for JEE/NEET Aspirants</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">Empowering talented students to achieve their dreams without financial barriers.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://spmandlalans.com/super-30-scholarship/#super30-form" target="_parent" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-3 rounded-md transition-colors text-lg">Apply Now</a>
+            <a href="https://spmandlalans.com/super-30-scholarship/#super30-form" target="_parent" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-3 rounded-md transition-colors text-lg">Apply Now</a> */}
             {/* <!-- Inside your iframe's HTML --> */}
 
 
            
             {/* <OpenRegDialog title={'Apply Now'} super30={true} /> */}
-            <a href="https://spmandlalans.com/courses" target='_parent'  className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">Explore Programs</a>
+            {/* <a href="https://spmandlalans.com/courses" target='_parent'  className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">Explore Programs</a>
           </div>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
 
       {/* Introduction Section */}
       <section id="about" className="py-16 bg-white">
@@ -370,7 +356,7 @@ function Page() {
       {/* Registration Form */}
        {/* Registration Form */}
        
-        <Super30Form/>
+        {/* <Super30Form/> */}
       {/* Footer */}
       {/* <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">

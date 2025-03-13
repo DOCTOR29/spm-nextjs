@@ -20,9 +20,9 @@
   /* --primary: oklch(0.205 0 0); */
   --primary: oklch(40.3% 0.1238 260.51);
   --accent1: oklch(71.16% 0.1812 22.84);
-  --accent2: oklch(77.62% 0.1116 188.54);
-  --accent3: oklch(72.57% 0.1072 215.81);
-  --accent4: oklch(80.54% 0.0688 164.44);
+  --accent2: oklch(75.6153%, 37.2131, 189.1276);
+  --accent3: oklch(69.2784%, 32.7768, 223.4195);
+  --accent4: oklch(78.4151%, 24.5303, 163.0801);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(88.83% 0.1837 99.51);
   --secondary-foreground: oklch(0.205 0 0);
@@ -91,7 +91,6 @@
 }
 
 @theme inline {
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -99,11 +98,6 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
-  --color-accent1: var(--accent1);
-  --color-accent2: var(--accent2);
-  --color-accent3: var(--accent3);
-  --color-accent4: var(--accent4);
-
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);

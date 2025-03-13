@@ -11,6 +11,10 @@
 //     extend: {
 //       colors: {
 //         primary: '#1D458A',
+//         accent1: '#FF6B6B',
+//         accent2: '#4ECDC4',
+//         accent3: '#45B7D1',
+//         accent4: '#96CEB4',
 //         secondary: '#F8DB06',
 //         background: 'hsl(var(--background))',
 //         foreground: 'hsl(var(--foreground))',

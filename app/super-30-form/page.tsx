@@ -162,7 +162,9 @@ export default function page(){
           
           <p className="text-sm text-gray-500 mt-4 text-center">
             By submitting this form, you agree to participate in the selection process for the Super 30 Batch.
+            
           </p>
+          <p className="text-sm text-gray-500 mt-4 text-center">* T&C applied</p>
         </form>
       </div>
     </div>

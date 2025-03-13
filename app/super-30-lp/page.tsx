@@ -1,11 +1,11 @@
 'use client'
 import React, { useState } from 'react';
-import { 
-  BookOpen, 
-  Award, 
-  Users, 
-  CheckCircle, 
-  Star, 
+import {
+  BookOpen,
+  Award,
+  Users,
+  CheckCircle,
+  Star,
   Calendar,
   FileText,
   User,
@@ -22,25 +22,25 @@ import {
 import Super30Form from '../component/ReactForm';
 
 function Page() {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     email: '',
-//     phone: '',
-//     school: '',
-//     grade: '',
-//     program: '',
-//     message: ''
-//   });
+  //   const [formData, setFormData] = useState({
+  //     name: '',
+  //     email: '',
+  //     phone: '',
+  //     school: '',
+  //     grade: '',
+  //     program: '',
+  //     message: ''
+  //   });
 
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-//     const { name, value } = e.target;
-//     setFormData(prevState => ({
-//       ...prevState,
-//       [name]: value
-//     }));
-//   };
+  //   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  //     const { name, value } = e.target;
+  //     setFormData(prevState => ({
+  //       ...prevState,
+  //       [name]: value
+  //     }));
+  //   };
 
-  
+  const urlAnchor = "https://spmandlalans.com/lp/super-30-coaching/#apply-form"
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -63,17 +63,17 @@ function Page() {
 
       {/* Hero Section */}
       {/* <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white py-20"> */}
-        {/* <div className="container mx-auto px-4 text-center">
+      {/* <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Super-30 Batch: 100% Scholarship for JEE/NEET Aspirants</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">Empowering talented students to achieve their dreams without financial barriers.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://spmandlalans.com/super-30-scholarship/#super30-form" target="_parent" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-3 rounded-md transition-colors text-lg">Apply Now</a> */}
-            {/* <!-- Inside your iframe's HTML --> */}
+      {/* <!-- Inside your iframe's HTML --> */}
 
 
-           
-            {/* <OpenRegDialog title={'Apply Now'} super30={true} /> */}
-            {/* <a href="https://spmandlalans.com/courses" target='_parent'  className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">Explore Programs</a>
+
+      {/* <OpenRegDialog title={'Apply Now'} super30={true} /> */}
+      {/* <a href="https://spmandlalans.com/courses" target='_parent'  className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">Explore Programs</a>
           </div>
         </div> */}
       {/* </section> */}
@@ -86,7 +86,7 @@ function Page() {
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               The path to becoming a successful engineer or doctor begins with quality education and proper guidance. Recognizing this need, SPM & Lalan's Coaching is proud to announce the launch of its exclusive Super-30 Batch for JEE and NEET aspirants. This initiative offers a 100% scholarship, making quality education accessible to talented students with big dreams.
             </p>
-            
+
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mb-8">
               <h3 className="text-xl font-bold mb-3 text-blue-800">Educational Philosophy</h3>
               <p className="text-gray-700">
@@ -101,15 +101,15 @@ function Page() {
       <section id="programs" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Super 30 Programs</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Program 1 */}
-            <div className="bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="bg-green-700  w-full text-white p-4">
+            <div className="bg-white flex flex-col h-full rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="bg-green-700 w-full text-white p-4">
                 <h3 className="text-xl font-bold">Super 30 (Medical)</h3>
                 <p className="text-sm">For NEET Aspirants</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-1">
                 <p className="text-gray-700 mb-4">Specially structured for Class 12 appearing & pass-out students aiming for top ranks in NEET.</p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -125,21 +125,21 @@ function Page() {
                     <span className="text-gray-700">National-level test series and in-depth conceptual learning.</span>
                   </li>
                 </ul>
-                
-                {/* <a href="#register" className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a> */}
               </div>
-              <div className="pb-4 m-auto">
-                {/* <OpenRegDialog title={'Apply Now'} variant={'green'} super30={true} /> */}
-                </div>
+              <div className="pb-4 px-4">
+                <a href={urlAnchor} className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">
+                  Apply Now
+                </a>
+              </div>
             </div>
 
             {/* Program 2 */}
-            <div className="bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="bg-white flex flex-col h-full rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               <div className="bg-blue-700 w-full text-white p-4">
                 <h3 className="text-xl font-bold">Super 30 (JEE)</h3>
                 <p className="text-sm">For Engineering Aspirants</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <p className="text-gray-700 mb-4">Designed for Class 12 appearing & pass-out students targeting JEE Mains & Advanced.</p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -155,21 +155,21 @@ function Page() {
                     <span className="text-gray-700">Personalized guidance for maximum performance.</span>
                   </li>
                 </ul>
-                {/* <a href="#register" className="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a> */}
-              </div>
-              <div className="pb-4 mt-auto">
-                {/* <OpenRegDialog title={'Apply Now'} variant={'purple'} super30={true} /> */}
-                
+                <div className="mt-auto">
+                  <a href={urlAnchor} className="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">
+                    Apply Now
+                  </a>
                 </div>
+              </div>
             </div>
 
             {/* Program 3 */}
-            <div className="bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="bg-purple-700  w-full text-white p-4">
+            <div className="bg-white flex flex-col h-full rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="bg-purple-700 w-full text-white p-4">
                 <h3 className="text-xl font-bold">Super 30 (15+15)</h3>
                 <p className="text-sm">For Integrated Students (Class 10)</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-1">
                 <p className="text-gray-700 mb-4">Special batch for Class 10 students aspiring for JEE & NEET.</p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -185,13 +185,12 @@ function Page() {
                     <span className="text-gray-700">Strong conceptual base to excel in Class 11 & 12.</span>
                   </li>
                 </ul>
-                {/* <OpenRegDialog title={'Apply Now'} variant={'navy'} super30={true} /> */}
-                {/* <a href="#register" className="inline-block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a> */}
               </div>
-              <div className="pb-4 mt-auto">
-                {/* <OpenRegDialog title={'Apply Now'} variant={'blue'} super30={true} /> */}
-                
-                </div>
+              <div className="pb-4 px-4">
+                <a href={urlAnchor} className="inline-block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">
+                  Apply Now
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -201,12 +200,12 @@ function Page() {
       <section id="selection" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Selection Process</h2>
-          
+
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-center text-gray-700 mb-10">
               The admission to SPM & Lalans Super 30 is through a three-stage selection process:
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-blue-50 rounded-lg p-6 text-center relative">
                 <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">1</div>
@@ -214,14 +213,14 @@ function Page() {
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Online Test</h3>
                 <p className="text-gray-600">Initial screening through our Eklavya Portal</p>
               </div>
-              
+
               <div className="bg-blue-50 rounded-lg p-6 text-center relative">
                 <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">2</div>
                 <Calendar className="h-12 w-12 mx-auto mb-4 text-blue-600" />
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Offline Test</h3>
                 <p className="text-gray-600">Written examination at designated centers</p>
               </div>
-              
+
               <div className="bg-blue-50 rounded-lg p-6 text-center relative">
                 <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">3</div>
                 <User className="h-12 w-12 mx-auto mb-4 text-blue-600" />
@@ -237,7 +236,7 @@ function Page() {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Why Choose the Super-30 Batch?</h2>
-          
+
           <div className="space-y-12 max-w-5xl mx-auto">
             {/* Faculty */}
             <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -272,16 +271,18 @@ function Page() {
             </div>
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="bg-blue-100 p-4 rounded-full flex-shrink-0">
-                <PartyPopper  className="h-10 w-10 text-blue-700" />
+                <PartyPopper className="h-10 w-10 text-blue-700" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">3. 100% Scholarship for Meritorious Students</h3>
                 <p className="text-gray-700">
-              
-                SPM & Lalan’s Coaching firmly believes that financial constraints should never hinder a student's aspirations. To support deserving candidates, the Super-30 Batch offers a 100% scholarship, covering tuition fees, a comfortable hostel facility, nutritious food, and security entirely. This initiative ensures that talented students receive the best possible guidance without any financial burden, enabling them to focus solely on their preparation for JEE and NEET.
+
+                  SPM & Lalan’s Coaching firmly believes that financial constraints should never hinder a student's aspirations. To support deserving candidates, the Super-30 Batch offers a 100% scholarship, covering tuition fees, a comfortable hostel facility, nutritious food, and security entirely. This initiative ensures that talented students receive the best possible guidance without any financial burden, enabling them to focus solely on their preparation for JEE and NEET.
                 </p>
               </div>
             </div>
+            <div className='w-full flex flex-col items-center'>
+              <a href={urlAnchor} className="inline-block  text-center w-72 bg-blue-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a></div>
           </div>
         </div>
       </section>
@@ -290,7 +291,7 @@ function Page() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Facilities We Provide</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
@@ -299,7 +300,7 @@ function Page() {
               <h3 className="text-xl font-semibold mb-2 text-gray-800">Spacious Classrooms</h3>
               <p className="text-gray-600">Well-equipped and designed for interactive learning.</p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <FileText className="h-8 w-8 text-blue-700" />
@@ -307,7 +308,7 @@ function Page() {
               <h3 className="text-xl font-semibold mb-2 text-gray-800">State-of-the-Art Labs</h3>
               <p className="text-gray-600">Providing hands-on practical learning experiences.</p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <MapPin className="h-8 w-8 text-blue-700" />
@@ -315,7 +316,7 @@ function Page() {
               <h3 className="text-xl font-semibold mb-2 text-gray-800">Comfortable Hostel</h3>
               <p className="text-gray-600">Ensuring a focused and distraction-free study environment.</p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <Star className="h-8 w-8 text-blue-700" />
@@ -323,7 +324,7 @@ function Page() {
               <h3 className="text-xl font-semibold mb-2 text-gray-800">Nutritious Meals</h3>
               <p className="text-gray-600">Prepared in a hygienic kitchen to promote student health.</p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <UserCheck className="h-8 w-8 text-blue-700" />
@@ -354,9 +355,9 @@ function Page() {
       </section>
 
       {/* Registration Form */}
-       {/* Registration Form */}
-       
-        {/* <Super30Form/> */}
+      {/* Registration Form */}
+
+      {/* <Super30Form/> */}
       {/* Footer */}
       {/* <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">

@@ -410,15 +410,15 @@ export default function Home() {
           <p className="mb-8 text-lg opacity-90 max-w-2xl mx-auto glass-effect p-6 rounded-xl">
             At Lalans Coaching, we are committed to shaping the future of students by providing top-notch JEE and NEET coaching in Guwahati. Whether you&apos;re aiming for IIT, AIIMS, or top medical colleges, our personalized learning approach, expert faculty, and advanced infrastructure will guide you toward success.
           </p>
-          <div className="flex gap-6 justify-center">
+          <div className="max-w-xl mx-auto  items-center justify-center">
             {/* <Button className="bg-secondary text-primary hover:bg-secondary/90 text-lg px-8 py-6 shadow-glow transform hover:scale-105 transition-all">
               Enroll Now
             </Button> */}
             {/* <Button className="glass-effect text-white hover:bg-white/20 text-lg px-8 py-6 transform hover:scale-105 transition-all">
               Book Free Consultation
             </Button> */}
-          </div>
             <EnquiryForm/>
+          </div>
         </div>
       </section>
     </main>

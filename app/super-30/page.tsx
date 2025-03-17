@@ -81,7 +81,7 @@ function Page() {
 >
   
         <div className="container mx-auto px-4 text-center ">
-          <div className='bg-yellow-400 text-red-600 font-bold  fixed z-10 top-0 w-full right-0 py-3'>For 2nd Phase Online Examination</div>
+          {/* <div className='bg-yellow-400 text-red-600 font-bold  fixed z-10 top-0 w-full right-0 py-3'>For 2nd Phase Online Examination</div> */}
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Super-30 Batch: 100% Scholarship for JEE/NEET Aspirants</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">Empowering talented students to achieve their dreams without financial barriers.</p>
           <div className="flex flex-wrap justify-center gap-4">

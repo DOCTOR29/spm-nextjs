@@ -7,7 +7,7 @@ interface NewsTickerProps {
 
 export function NewsTicker({ news, speed = 1905 }: NewsTickerProps) {
   return (
-    <div className="relative -mt-16 pt-2 overflow-hidden bg-red-900 text-white font-bold h-12">
+    <div className="relative -mt-16 pt-2 mb-20 overflow-hidden bg-red-900 text-white font-bold h-12">
       <div 
         className="whitespace-nowrap animate-scroll inline-block"
         style={{

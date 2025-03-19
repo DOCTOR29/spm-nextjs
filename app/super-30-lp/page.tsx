@@ -81,7 +81,7 @@ function Page() {
 
       {/* Introduction Section */}
       <section id="about" className="py-16 bg-white">
-        <NewsTicker news={['Register For  the  2nd Phase last Date: 21 March, 11:59 pm']}/>
+        <NewsTicker speed={100} news={['Register For  the  2nd Phase. Last Date: 21 March, 11:59 pm','Register For  the  2nd Phase. Last Date: 21 March, 11:59 pm','Register For  the  2nd Phase. Last Date: 21 March, 11:59 pm',]}/>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">About Super 30 Batch</h2>
           <div className="max-w-4xl mx-auto">

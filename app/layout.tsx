@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SPM",
-  description: "SPM Static Pages",
+  description: "SPM Static Pages.",
 };
 
 export default function RootLayout({

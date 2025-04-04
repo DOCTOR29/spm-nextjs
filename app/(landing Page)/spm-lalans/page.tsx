@@ -46,7 +46,8 @@ import EmblaCarousel from "./components/EmblaCorousel";
 import { EmblaOptionsType } from "embla-carousel";
 const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
-// const SLIDES =['s','s2']
+
+const teachers =['./Teacher/1.webp','./Teacher/2.webp','./Teacher/3.webp','./Teacher/4.webp','./Teacher/5.webp','./Teacher/6.webp','./Teacher/7.webp', './Teacher/8.webp']
 export default function LandingPage() {
   return (
     <main className="min-h-screen">
@@ -214,11 +215,7 @@ export default function LandingPage() {
               Our Results Speak for Themselves
             </span>
           </h2>
-          <h2 className="text-3xl font-bold text-slate-600">NEET Toppers</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            <img src="/NEET/1.png" className="h-fit " alt="" />
-            <img src="/NEET/3.png" className="h-fit" alt="" />
-            <img src="/NEET/2.png" className="h-fit" alt="" />
+        
 
             {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
@@ -230,21 +227,21 @@ export default function LandingPage() {
               <h3 className="text-3xl font-bold mb-2">95%</h3>
               <p className="text-gray-600">Success Rate</p>
             </Card> */}
-          </div>
-          <h2 className="text-3xl font-bold text-slate-600">JEE Toppers</h2>
+          
+         
           <div className="grid gap-8   md:grid-cols-3">
-            <img src="/JEE/1.png" className="h-full  card-hover  " alt="" />
-            <img src="/JEE/2.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/3.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/4.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/5.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/6.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/7.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/8.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/9.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/10.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/11.png" className="h-fit card-hover " alt="" />
-            <img src="/JEE/12.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/1.png" className="h-full  card-hover  " alt="" />
+            <img src="/Topper/2.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/3.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/4.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/5.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/6.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/7.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/8.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/9.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/10.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/11.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/12.png" className="h-fit card-hover " alt="" />
 
             {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
@@ -486,8 +483,20 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+{/* Teacher List */}
+      <section className="py-20  bg-gradient-to-br from-primary/5 to-secondary/5" >
+      <div className="container mx-auto px-6 relative">
+      <div className="max-w-6xl gradient-text text-6xl py-20 font-bold   mx-auto text-center">
+      Guiding Minds, Shaping Futures – Meet Our Expert Faculties at SPM & Lalan's
+  
+      </div>
+      <EmblaCarousel slides={teachers} teacher={true} options={OPTIONS} />
+      </div>  
+      </section>
+
 
       {/* Final CTA Section */}
+
       <section className="gradient-bg hero-pattern py-20 text-white relative">
         <div className="absolute inset-0 bg-primary/90"></div>
         <div className="container mx-auto px-6 relative text-center">

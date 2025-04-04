@@ -48,6 +48,7 @@ const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
 
 const teachers =['./Teacher/1.webp','./Teacher/2.webp','./Teacher/3.webp','./Teacher/4.webp','./Teacher/5.webp','./Teacher/6.webp','./Teacher/7.webp', './Teacher/8.webp']
+const topper =['./Topper/1.png','./Topper/2.png','./Topper/3.png','./Topper/4.png','./Topper/5.png','./Topper/6.png','./Topper/7.png', './Topper/8.png']
 export default function LandingPage() {
   return (
     <main className="min-h-screen">
@@ -90,13 +91,7 @@ export default function LandingPage() {
                     className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70"
                   />
                 </div>
-                {/* <div>
-                  <Input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70"
-                  />
-                </div> */}
+                
                 <div>
                   <Select>
                     <SelectTrigger className="w-full bg-white/10 border-white/20 ">
@@ -216,7 +211,7 @@ export default function LandingPage() {
             </span>
           </h2>
         
-
+          <EmblaCarousel slides={topper} teacher={true} options={OPTIONS} />
             {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-2">1000+</h3>
@@ -229,7 +224,7 @@ export default function LandingPage() {
             </Card> */}
           
          
-          <div className="grid gap-8   md:grid-cols-3">
+          {/* <div className="grid gap-8   md:grid-cols-3">
             <img src="/Topper/1.png" className="h-full  card-hover  " alt="" />
             <img src="/Topper/2.png" className="h-fit card-hover " alt="" />
             <img src="/Topper/3.png" className="h-fit card-hover " alt="" />
@@ -241,7 +236,7 @@ export default function LandingPage() {
             <img src="/Topper/9.png" className="h-fit card-hover " alt="" />
             <img src="/Topper/10.png" className="h-fit card-hover " alt="" />
             <img src="/Topper/11.png" className="h-fit card-hover " alt="" />
-            <img src="/Topper/12.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/12.png" className="h-fit card-hover " alt="" /> */}
 
             {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
@@ -253,7 +248,7 @@ export default function LandingPage() {
               <h3 className="text-3xl font-bold mb-2">95%</h3>
               <p className="text-gray-600">Success Rate</p>
             </Card> */}
-          </div>
+          {/* </div> */}
           <div className="text-center mt-8 flex flex-col items-center justify-center">
             <h1 className="text-4xl pt-25 gradient-text font-bold">
               Topper&apos;s Speak
@@ -480,7 +475,7 @@ export default function LandingPage() {
 {/* Teacher List */}
       <section className="py-20  bg-gradient-to-br from-primary/5 to-secondary/5" >
       <div className="container mx-auto px-6 relative">
-      <div className="max-w-6xl gradient-text text-3xl md:text-6xl py-20 font-bold   mx-auto text-center">
+      <div className="max-w-6xl gradient-text text-3xl md:text-6xl py-10 md:py-20 font-bold   mx-auto text-center">
       Guiding Minds, Shaping Futures – Meet Our Expert Faculties at SPM & Lalan's
   
       </div>

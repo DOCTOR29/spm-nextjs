@@ -10,6 +10,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons'
+import { ReadMore } from './ReadMore'
 
 type PropType = {
   slides?: any[]
@@ -64,14 +65,14 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       </div>
     </div>
   </section>:
-    <section className="embla">
+    <section className="embla1">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides?.map((slide, index) => (
             <div className="embla__slide w-10 sm:w-4xl md:w-full" key={index}>
-              
-              <div className="text-4xl font-bold py-10 ">{slide.name }</div>
-              <div className="">{slide.testimonial }</div>
+              <div className="text-4xl font-bold py-10 ">{slide.name}</div>
+              <ReadMore id="read-more-text" text={slide.testimonial}/>
+              {/* <div className="">{slide.testimonial}</div> */}
             </div>
           ))}
         </div>
@@ -89,7 +90,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               key={index}
               onClick={() => onDotButtonClick(index)}
               className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
+                index === selectedIndex ? 'embla__dot--selected' : ''
               )}
             />
           ))}

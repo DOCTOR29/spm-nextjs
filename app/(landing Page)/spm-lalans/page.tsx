@@ -32,7 +32,13 @@ import {
   UserPlus,
   Rocket
 } from "lucide-react";
-
+import './css/embla.css'
+import testimonials from './components/data/testimonials.json'
+import EmblaCarousel from "./components/EmblaCorousel";
+import { EmblaOptionsType } from "embla-carousel";
+const OPTIONS: EmblaOptionsType = { containScroll: false, }
+const SLIDE_COUNT = 5
+// const SLIDES =['s','s2']
 export default function LandingPage() {
   return (
     <main className="min-h-screen">
@@ -45,12 +51,12 @@ export default function LandingPage() {
               <div className="animate-float mb-8">
                 <GraduationCap className="h-20 w-20 text-secondary" />
               </div>
-              <h1 className="mb-6 text-4xl font-bold md:text-6xl">
+              {/* <h1 className="mb-6 text-4xl font-bold md:text-6xl">
                 Empowering Students for Excellence in Competitive Exams at
                 <span className="block gradient-text mt-2 text-5xl md:text-7xl font-extrabold">
                   SPM & LALAN&apos;S Coaching
                 </span>
-              </h1>
+              </h1> */}
               <p className="mb-8 text-lg opacity-90 glass-effect p-6 rounded-xl">
                 Welcome to SPM & Lalan&apos;s Coaching for Success—Guwahati&apos;s No.1 Institute for JEE, NEET, Olympiad, NTSE, CUET, & More!
               </p>
@@ -115,32 +121,40 @@ export default function LandingPage() {
               {
                 icon: <Users className="h-12 w-12 text-accent1" />,
                 title: "Expert Faculty",
-                description: "Learn from experienced educators with a proven track record. Personalized attention tailored to learning styles.",
+                bullet1: "Learn from experienced educators with a proven track record in mentoring students for competitive exams",
+                bullet2: "Receive personalized attention tailored to individual learning styles and needs"
               },
               {
                 icon: <BookOpen className="h-12 w-12 text-accent2" />,
                 title: "Comprehensive Study Material",
-                description: "Updated study material across subjects. Regular mock tests & quizzes.",
+                bullet1: "Updated study material across subjects. Regular mock tests & quizzes.",
+                bullet2: "Benefit from regular mock tests and quizzes to assess progress and identify areas for improvement."
+
               },
               {
                 icon: <BrainCircuit className="h-12 w-12 text-accent3" />,
                 title: "Interactive Learning Environment",
-                description: "Live and recorded lectures. Doubt-clearing & one-on-one mentorship.",
+                bullet1: "Engage in live and recorded lectures designed to enhance understanding and retention.",
+                bullet2: "Participate in doubt-clearing sessions and one-on-one mentorship to address specific challenges."
               },
               {
                 icon: <Trophy className="h-12 w-12 text-accent4" />,
                 title: "Proven Track Record",
-                description: "Successful alumni & high success rates.",
+                bullet1: "Join a community of successful alumni who have secured top ranks in various competitive exams.",
+                bullet2: "Leverage our consistent history of high success rates to boost your confidence and performance. "
               },
               {
                 icon: <Wallet className="h-12 w-12 text-accent1" />,
                 title: "Affordable and Flexible Programs",
-                description: "Competitive pricing, flexible options.",
+                bullet1: "Experience quality education at competitive prices with flexible payment options.",
+                bullet2: "Choose from a variety of courses tailored to fit different schedules and learning preferences."
               },
               {
                 icon: <Home className="h-12 w-12 text-accent2" />,
                 title: "Residential Facilities",
-                description: "Secure, comfortable hostels with nutritious meals and 24/7 support.",
+                bullet1: "Stay in comfortable, well-equipped hostels with 24/7 security and study-friendly environments.",
+                bullet2: "Enjoy nutritious meals, fully surveillance security and dedicated study spaces for uninterrupted learning.",
+                bullet3: "Access round-the-clock medical assistance and a supportive faculty for a home-like experience"
               },
             ].map((benefit, index) => (
               <Card key={index} className="p-8 card-hover bg-white/80 backdrop-blur-sm">
@@ -150,7 +164,12 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <h3 className="mb-4 text-2xl font-bold text-primary">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <ul className="list-disc">
+
+                <li className="text-gray-600">{benefit.bullet1}</li>
+                <li className="text-gray-600">{benefit.bullet2}</li>
+                { benefit.bullet3 && <li className="text-gray-600">{benefit.bullet3}</li>}
+                </ul>
               </Card>
             ))}
           </div>
@@ -163,13 +182,16 @@ export default function LandingPage() {
           <h2 className="text-4xl font-bold text-center mb-12">
             <span className="gradient-text">Our Results Speak for Themselves</span>
           </h2>
+          <h2 className="text-3xl font-bold text-slate-600" >NEET Toppers</h2>
           <div className="grid gap-8 md:grid-cols-3">
-            <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
-              <Medal className="h-16 w-16 text-accent1 mx-auto mb-6" />
-              <h3 className="text-3xl font-bold mb-2">500+</h3>
-              <p className="text-gray-600">Selections in JEE Advanced</p>
-            </Card>
-            <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+            
+            
+              <img src="/NEET/1.png" className="h-fit " alt="" />
+              <img src="/NEET/3.png" className="h-fit" alt="" />
+              <img src="/NEET/2.png" className="h-fit" alt="" />
+              
+         
+            {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-2">1000+</h3>
               <p className="text-gray-600">NEET Qualifiers</p>
@@ -178,12 +200,42 @@ export default function LandingPage() {
               <Star className="h-16 w-16 text-accent3 mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-2">95%</h3>
               <p className="text-gray-600">Success Rate</p>
-            </Card>
+            </Card> */}
           </div>
-          <div className="text-center mt-8">
-            <Button variant="outline" className="text-primary hover:bg-primary/10">
-              View Topper&apos;s Speak
-            </Button>
+          <h2 className="text-3xl font-bold text-slate-600" >JEE Toppers</h2>
+          <div className="grid gap-8   md:grid-cols-3">
+            
+            
+              <img src="/JEE/1.png" className="h-full  card-hover  " alt="" />
+              <img src="/JEE/2.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/3.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/4.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/5.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/6.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/7.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/8.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/9.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/10.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/11.png" className="h-fit card-hover " alt="" />
+              <img src="/JEE/12.png" className="h-fit card-hover " alt="" />
+              
+         
+            {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+              <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
+              <h3 className="text-3xl font-bold mb-2">1000+</h3>
+              <p className="text-gray-600">NEET Qualifiers</p>
+            </Card>
+            <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+              <Star className="h-16 w-16 text-accent3 mx-auto mb-6" />
+              <h3 className="text-3xl font-bold mb-2">95%</h3>
+              <p className="text-gray-600">Success Rate</p>
+            </Card> */}
+          </div>
+          <div className="text-center mt-8 flex flex-col items-center justify-center">
+            <h1 className="text-4xl pt-25 gradient-text font-bold">Topper&apos;s Speak</h1>
+              
+       
+<EmblaCarousel slides={testimonials} options={OPTIONS} />
           </div>
         </div>
       </section>
@@ -192,45 +244,56 @@ export default function LandingPage() {
       <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
-            <span className="gradient-text">Our Comprehensive Programs</span>
+            <span className="gradient-text">Our Comprehensive Courses</span>
           </h2>
+          <div className="py-14 text-gray-700">
+
+          <p >At SPM & LALAN's Coaching, we are dedicated to offering a comprehensive suite of programs tailored to meet the diverse academic needs of our students. In addition to our core offerings, we provide specialized courses designed to strengthen foundational knowledge and enhance competitive exam readiness.
+          </p>
+          </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 icon: <School className="h-16 w-16 text-accent1" />,
                 title: "Pre-Foundation Course",
-                subtitle: "Classes 8–10",
-                description: "Conceptual learning, Olympiads & NTSE prep",
+                subtitle:  "Designed for students in classes 8 to 10, this course focuses on building a strong conceptual base in subjects like Physics, Chemistry, Mathematics, and Biology, preparing them for future competitive exams.",
+                description: ["Conceptual learning, Olympiads & NTSE prep", "Exposure to problem-solving techniques.","Preparation for Olympiads and NTSE examinations." ],
               },
               {
                 icon: <BookCheck className="h-16 w-16 text-accent2" />,
                 title: "Foundation Course",
-                subtitle: "Classes 11–12",
-                description: "Board + JEE/NEET/CUET prep, mock tests, mentorship",
+                subtitle: "Aimed at students in classes 11 and 12, this course integrates the board syllabus with advanced topics, equipping students for competitive exams like JEE (Main/Advanced), NEET, and CUET.",
+                description: ["Comprehensive coverage of both board and competitive exam syllabi.", "Regular assessments and mock tests.", "Personalized mentorship and doubt-clearing sessions."],
               },
               {
                 icon: <Brain className="h-16 w-16 text-accent3" />,
                 title: "Fresher Course",
-                subtitle: "After Class 12",
-                description: "First attempt prep with time management and concept mastery",
+                subtitle: "Tailored for students who have recently completed their class 12 exams and are preparing for their first attempt at competitive exams. This intensive curriculum bridges gaps and enhances understanding.",
+                description: ["Focused preparation for JEE, NEET, and other entrance exams.", "In-depth concept clarification and application.","Time management and exam strategy sessions." ],
               },
               {
                 icon: <Target className="h-16 w-16 text-accent4" />,
                 title: "Dropper Course",
-                subtitle: "One Year Program",
-                description: "Intensive JEE/NEET improvement program",
+                subtitle: "A one-year program designed for students who have completed their 12th-grade exams but wish to dedicate an additional year to improve their scores in competitive exams like JEE and NEET.",
+                description: ["Expert faculty with extensive experience in competitive exam coaching.", "Regular mock tests to simulate exam conditions and track progress.", "Personalized attention and doubt-clearing sessions to address individual challenges."],
               },
               {
                 icon: <Rocket className="h-16 w-16 text-accent1" />,
                 title: "Crash Course",
-                subtitle: "Short Term",
-                description: "High-intensity revision program",
+                subtitle: "An intensive short-term program aimed at thorough revision and practice before the examination season. Ideal for students seeking to consolidate their knowledge and boost their confidence",
+                description:[ "Rapid coverage of key topics and concepts.", " Extensive practice through mock tests and previous years' question papers.", "Strategies for effective time management during exams."],
+              },
+              {
+                icon: <Rocket className="h-16 w-16 text-accent1" />,
+                title: "Capsule Course",
+                subtitle: "A focused program designed to provide in-depth coverage of specific subjects or topics within a limited timeframe, catering to students who need targeted assistance.",
+                description:[ "Concentrated study sessions on selected topics.", "Interactive classes with an emphasis on problem-solving.", "Ideal for students looking to strengthen particular areas of weakness"],
               },
               {
                 icon: <FileText className="h-16 w-16 text-accent2" />,
                 title: "CUET Preparation",
-                subtitle: "Specialized Program",
-                description: "CUET-specific strategy, mock exams & mentoring",
+                subtitle: "A structured coaching program designed to help students excel in CUET, ensuring admission to top central universities.",
+                description: ["Comprehensive subject coverage with expert guidance.", "Strategic test preparation with mock exams and practice sessions.","Personalized mentoring to enhance problem-solving and time management skills."],
               },
             ].map((course, index) => (
               <Card key={index} className="p-8 card-hover bg-white/80 backdrop-blur-sm">
@@ -239,19 +302,60 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-primary">{course.title}</h3>
                 <h4 className="text-lg font-semibold mb-4 text-accent1">{course.subtitle}</h4>
-                <p className="text-gray-600">{course.description}</p>
+                <ul className="text-gray-600">
+               {course.description.map((desc =>
+               <li className="list-disc">
+                    {desc}
+               </li>))
+                }
+                
+                </ul>
               </Card>
             ))}
           </div>
         </div>
       </section>
+{/* Section SPM & Lalans*/}
+
+
+
+
+
+<section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+<div className="container mx-auto px-6 bg-amber-100 py-10 rounded-2xl">
+    <div className="flex flex-col gap-10 text-xl font-medium">
+            <p>At SPM & LALAN's Coaching, we are committed to providing comprehensive programs that cater to the diverse needs of our students. In addition to our core offerings, we are proud to introduce the following specialized programs:​
+            </p>
+            <Button className="text-white w-fit mx-auto">
+                Apply Now!
+            </Button>
+            {/* CTA Button to be added */}
+         </div>
+</div>
+</section>
+
+
+
+
+
 
       {/* Super 30 Section */}
       <section className="gradient-bg hero-pattern py-20 text-white relative">
         <div className="absolute inset-0 bg-primary/90"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Super 30 Batch</h2>
+            <h2 className="text-6xl font-bold mb-20">Dream big, achieve more: Additional Programs at SPM & LALAN’S Coaching
+            </h2>
+            <h2 className="text-4xl font-medium mb-6">School Integrated Program (SIP)
+            </h2>
+            <p>The SIP bridges school academics with competitive exam readiness, ensuring students excel in board exams while building a strong foundation for national-level entrance tests. The program is structured to align with the learning stages of classes 8–10 (foundational phase) and classes 11–12 (advanced phase).​
+            </p>
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+            <h2 className="text-4xl font-bold mt-20 mb-6">Super 30 Batch</h2>
             <div className="glass-effect p-8 rounded-xl">
               <Star className="h-16 w-16 text-secondary mx-auto mb-6" />
               <p className="text-lg mb-6">

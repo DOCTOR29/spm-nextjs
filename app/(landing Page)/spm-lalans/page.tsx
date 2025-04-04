@@ -90,13 +90,13 @@ export default function LandingPage() {
                     className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70"
                   />
                 </div>
-                <div>
+                {/* <div>
                   <Input
                     type="email"
                     placeholder="Email Address"
                     className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70"
                   />
-                </div>
+                </div> */}
                 <div>
                   <Select>
                     <SelectTrigger className="w-full bg-white/10 border-white/20 ">
@@ -271,13 +271,7 @@ export default function LandingPage() {
             <span className="gradient-text">Our Comprehensive Courses</span>
           </h2>
           <div className="py-14 text-gray-700">
-            <p>
-              At SPM & LALAN's Coaching, we are dedicated to offering a
-              comprehensive suite of programs tailored to meet the diverse
-              academic needs of our students. In addition to our core offerings,
-              we provide specialized courses designed to strengthen foundational
-              knowledge and enhance competitive exam readiness.
-            </p>
+            
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -382,11 +376,11 @@ export default function LandingPage() {
       </section>
       {/* Section SPM & Lalans*/}
 
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-6 bg-amber-100 py-10 rounded-2xl">
+      <section className="py-20 bg-gradient-to-br px-6 from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-6  bg-amber-100 py-10 rounded-2xl">
           <div className="flex flex-col gap-10 text-xl font-medium">
             <p>
-              At SPM & LALAN's Coaching, we are committed to providing
+              At <strong>SPM & LALAN's</strong> Coaching, we are committed to providing
               comprehensive programs that cater to the diverse needs of our
               students. In addition to our core offerings, we are proud to
               introduce the following specialized programs:​
@@ -486,7 +480,7 @@ export default function LandingPage() {
 {/* Teacher List */}
       <section className="py-20  bg-gradient-to-br from-primary/5 to-secondary/5" >
       <div className="container mx-auto px-6 relative">
-      <div className="max-w-6xl gradient-text text-6xl py-20 font-bold   mx-auto text-center">
+      <div className="max-w-6xl gradient-text text-3xl md:text-6xl py-20 font-bold   mx-auto text-center">
       Guiding Minds, Shaping Futures – Meet Our Expert Faculties at SPM & Lalan's
   
       </div>

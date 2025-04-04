@@ -70,7 +70,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides?.map((slide, index) => (
             <div className="embla__slide w-10 sm:w-4xl md:w-full" key={index}>
               
-              <div className="embla__slide__number">{slide.name }</div>
+              <div className="text-4xl font-bold py-10 ">{slide.name }</div>
               <div className="">{slide.testimonial }</div>
             </div>
           ))}

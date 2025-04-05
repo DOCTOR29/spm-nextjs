@@ -210,8 +210,11 @@ export default function LandingPage() {
               Our Results Speak for Themselves
             </span>
           </h2>
-        
+          {/* <div className="md:hidden block "> */}
+
           <EmblaCarousel slides={topper} teacher={true} options={OPTIONS} />
+          {/* </div> */}
+          
             {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-2">1000+</h3>
@@ -253,8 +256,10 @@ export default function LandingPage() {
             <h1 className="text-4xl pt-25 gradient-text font-bold">
               Topper&apos;s Speak
             </h1>
+         
 
             <EmblaCarousel slides={testimonials} options={OPTIONS} />
+        
           </div>
         </div>
       </section>

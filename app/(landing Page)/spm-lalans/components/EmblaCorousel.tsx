@@ -21,6 +21,7 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options, teacher } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options,  [Autoplay({ delay: 3000 })])
+  const [emblaRef1, emblaApi1] = useEmblaCarousel(options,  [Autoplay({ delay: 3000 })])
   // const [emblaRef,emblaApi ] = useEmblaCarousel(options)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -34,7 +35,47 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    teacher? <section className="embla">
+    teacher?<>
+    {/* Mobile */}
+    <div className='md:hidden'>
+     <section className="embla-mob">
+    <div className="embla__viewport" ref={emblaRef1}>
+      <div className="embla__container">
+        {slides?.map((teacher, index) => (
+          <div className="embla__slide w-10 sm:w-4xl md:w-full" key={index}>
+            
+          <img src={teacher} alt="" />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="embla__controls">
+      <div className="embla__buttons">
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      </div>
+
+      <div className="embla__dots">
+        {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            onClick={() => onDotButtonClick(index)}
+            className={'embla__dot'.concat(
+              index === selectedIndex ? ' embla__dot--selected' : ''
+            )}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+  </div>
+
+{/* desktop */}
+  <div className='md:block hidden'>
+
+
+     <section className="embla">
     <div className="embla__viewport" ref={emblaRef}>
       <div className="embla__container">
         {slides?.map((teacher, index) => (
@@ -64,7 +105,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         ))}
       </div>
     </div>
-  </section>:
+  </section>
+  </div>
+  </>
+  :
     <section className="embla1">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">

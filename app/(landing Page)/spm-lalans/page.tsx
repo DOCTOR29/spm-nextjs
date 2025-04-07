@@ -39,6 +39,9 @@ import {
   FileText,
   UserPlus,
   Rocket,
+  Divide,
+  ChevronUp,
+  ChevronDown,
 } from "lucide-react";
 import "./css/embla.css";
 import testimonials from "./components/data/testimonials.json";
@@ -54,9 +57,10 @@ const teachers =['./Teacher/1.webp','./Teacher/2.webp','./Teacher/3.webp','./Tea
 const topper =['./Topper/1.png','./Topper/2.png','./Topper/3.png','./Topper/4.png','./Topper/5.png','./Topper/6.png','./Topper/7.png', './Topper/8.png']
 
 
-const [isReadMore, setisReadMore] = useState(false)
 
 export default function LandingPage() {
+  const [isReadMore, setisReadMore] = useState(false)
+  const [isReadMoreSuper, setisReadMoreSuper] = useState(false)
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -66,25 +70,32 @@ export default function LandingPage() {
         
         <div  style={{ backgroundImage: "url('/banner/hero.jpeg')",  backgroundSize: "cover",
   backgroundPosition: "center",
-  backgroundRepeat: "no-repeat" }} className="absolute inset-0 bg-primary/90"></div>
+  backgroundRepeat: "no-repeat" }} className="absolute inset-0 bg-primary/90">
+     <img src="/banner/side.jpg" className="object-cover object-bottom  h-full  w-1/2" alt="" />
+  </div>
         <div className="container mx-auto px-6 relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-left">
+            
+            <div   className="text-left">
+           
               <div className="animate-float mb-8">
-                <GraduationCap className="h-20 w-20 text-secondary" />
+               
+                {/* <GraduationCap className="h-20 w-20 text-secondary" /> */}
               </div>
+             
               {/* <h1 className="mb-6 text-4xl font-bold md:text-6xl">
                 Empowering Students for Excellence in Competitive Exams at
                 <span className="block gradient-text mt-2 text-5xl md:text-7xl font-extrabold">
                   SPM & LALAN&apos;S Coaching
                 </span>
               </h1> */}
-              <p className="mb-8 text-lg opacity-90 glass-effect p-6 rounded-xl">
+              {/* <p className="mb-8 text-lg opacity-90 glass-effect p-6 rounded-xl">
                 Welcome to SPM & Lalan&apos;s Coaching for
                 Success—Guwahati&apos;s No.1 Institute for JEE, NEET, Olympiad,
                 NTSE, CUET, & More!
-              </p>
+              </p> */}
             </div>
+            
             <div className="glass-effect p-8 rounded-xl backdrop-blur-md">
               <h3 className="text-2xl font-bold mb-6 text-center">
                 Start Your Journey Today
@@ -427,7 +438,7 @@ export default function LandingPage() {
               </p>
               <ReadMore id={""} text={""} />
               {/* ReadMore */}
-              { <div >
+              { isReadMore && <div >
               
               <h3 className="text-2xl pt-12 font-bold mb-8">Key Features:</h3>
               <ul className="list-disc flex md:flex-row flex-col space-y-2 gap-8">
@@ -454,6 +465,8 @@ export default function LandingPage() {
               </ul>
 
               </div> }
+              <div  onClick={() => setisReadMore(!isReadMore)}> <Button className="text-white" variant={"link"}>{isReadMore ?<> <ChevronUp />Read More</> : <> <ChevronDown /> Read Less</>} </Button> </div>
+              
             </div>
             <h2 className="text-4xl font-bold mt-20 mb-6">Super 30 Batch</h2>
             <div className="glass-effect text-left p-8 rounded-xl">
@@ -461,7 +474,7 @@ export default function LandingPage() {
               <p className="text-lg mb-6 ">
               The Super 30 Batch is a prestigious scholarship program designed to support 90 meritorious students (30 each for Medical, Engineering, and Integrated streams) by providing 100% free tuition, study materials, and personalized mentorship. This initiative aims to empower talented aspirants to achieve top ranks in JEE and NEET examinations
               </p>
-
+                {isReadMoreSuper &&
               <ul className="space-y-4 text-left mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
@@ -487,7 +500,8 @@ export default function LandingPage() {
                   <span>Nutritious Meals: Daily provision of wholesome and balanced meals to support students' health and well-being.
                   ​</span>
                 </li>
-              </ul>
+              </ul>}
+              <div  onClick={() => setisReadMoreSuper(!isReadMoreSuper)}> <Button className="text-white" variant={"link"}>{isReadMoreSuper ?<> <ChevronUp />Read More</> : <> <ChevronDown /> Read Less</>} </Button> </div>
               <p className="py-10">These additional programs reflect our dedication to nurturing academic excellence and providing opportunities for all students to succeed.
               </p>
               <Button className="bg-secondary text-primary hover:bg-secondary/90">

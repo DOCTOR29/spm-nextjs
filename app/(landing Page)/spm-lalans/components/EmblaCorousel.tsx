@@ -52,8 +52,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
     <div className="embla__controls">
       <div className="embla__buttons">
-        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        {/* <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} /> */}
       </div>
 
       <div className="embla__dots">
@@ -89,8 +89,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
     <div className="embla__controls">
       <div className="embla__buttons">
-        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        {/* <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} /> */}
+        {/* <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} /> */}
       </div>
 
       <div className="embla__dots">
@@ -113,9 +113,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides?.map((slide, index) => (
-            <div className="embla__slide w-10 sm:w-4xl md:w-full" key={index}>
+            <div className="embla__slide max-w-xl md:w-24" key={index}>
               <div className="text-4xl font-bold py-10 ">{slide.name}</div>
+             <div className='w-fit'>
+
               <ReadMore id="read-more-text" text={slide.testimonial}/>
+             </div>
               {/* <div className="">{slide.testimonial}</div> */}
             </div>
           ))}
@@ -124,8 +127,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
       <div className="embla__controls">
         <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          {/* <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} /> */}
         </div>
 
         <div className="embla__dots">

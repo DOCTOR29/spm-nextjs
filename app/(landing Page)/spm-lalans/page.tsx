@@ -44,6 +44,8 @@ import "./css/embla.css";
 import testimonials from "./components/data/testimonials.json";
 import EmblaCarousel from "./components/EmblaCorousel";
 import { EmblaOptionsType } from "embla-carousel";
+import { ReadMore } from "./components/ReadMore";
+import { CarouselDemo } from "./components/carouselTestimonials";
 const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
 
@@ -256,9 +258,9 @@ export default function LandingPage() {
             <h1 className="text-4xl pt-25 gradient-text font-bold">
               Topper&apos;s Speak
             </h1>
-         
+            <CarouselDemo/>
 
-            <EmblaCarousel slides={testimonials} options={OPTIONS} />
+            {/* <EmblaCarousel slides={testimonials} options={OPTIONS} /> */}
         
           </div>
         </div>
@@ -411,7 +413,9 @@ export default function LandingPage() {
                 program is structured to align with the learning stages of
                 classes 8–10 (foundational phase) and classes 11–12 (advanced
                 phase).​
+                
               </p>
+              <ReadMore id={""} text={""} />
               <h3 className="text-2xl pt-12 font-bold mb-8">Key Features:</h3>
               <ul className="list-disc flex md:flex-row flex-col space-y-2 gap-8">
                 <li className="flex gap-2">
@@ -442,6 +446,7 @@ export default function LandingPage() {
               <p className="text-lg mb-6 ">
               The Super 30 Batch is a prestigious scholarship program designed to support 90 meritorious students (30 each for Medical, Engineering, and Integrated streams) by providing 100% free tuition, study materials, and personalized mentorship. This initiative aims to empower talented aspirants to achieve top ranks in JEE and NEET examinations
               </p>
+
               <ul className="space-y-4 text-left mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />

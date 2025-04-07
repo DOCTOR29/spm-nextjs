@@ -55,8 +55,13 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative gradient-bg hero-pattern py-24 text-white">
-        <div className="absolute inset-0 bg-primary/90"></div>
+      <section 
+    
+      className="relative  hero-pattern py-24 text-white">
+        
+        <div  style={{ backgroundImage: "url('/banner/hero.jpeg')",  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat" }} className="absolute inset-0 bg-primary/90"></div>
         <div className="container mx-auto px-6 relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-left">

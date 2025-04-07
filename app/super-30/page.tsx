@@ -122,7 +122,7 @@ function Page() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Program 1 */}
-            {/* <div className="bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               <div className="bg-green-700  w-full text-white p-4">
                 <h3 className="text-xl font-bold">Super 30 (Medical)</h3>
                 <p className="text-sm">For NEET Aspirants</p>
@@ -147,7 +147,7 @@ function Page() {
                 <a href={`${urlAnchor}`} target="_parent" className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-md transition-colors">Apply Now</a>
               </div>
              
-            </div> */}
+            </div>
 
             {/* Program 2 */}
             <div className="bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">

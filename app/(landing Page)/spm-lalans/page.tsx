@@ -46,11 +46,16 @@ import EmblaCarousel from "./components/EmblaCorousel";
 import { EmblaOptionsType } from "embla-carousel";
 import { ReadMore } from "./components/ReadMore";
 import { CarouselDemo } from "./components/carouselTestimonials";
+import { useState } from "react";
 const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
 
 const teachers =['./Teacher/1.webp','./Teacher/2.webp','./Teacher/3.webp','./Teacher/4.webp','./Teacher/5.webp','./Teacher/6.webp','./Teacher/7.webp', './Teacher/8.webp']
 const topper =['./Topper/1.png','./Topper/2.png','./Topper/3.png','./Topper/4.png','./Topper/5.png','./Topper/6.png','./Topper/7.png', './Topper/8.png']
+
+
+const [isReadMore, setisReadMore] = useState(false)
+
 export default function LandingPage() {
   return (
     <main className="min-h-screen">
@@ -263,10 +268,10 @@ export default function LandingPage() {
             <h1 className="text-4xl pt-25 gradient-text font-bold">
               Topper&apos;s Speak
             </h1>
-            <CarouselDemo/>
 
             {/* <EmblaCarousel slides={testimonials} options={OPTIONS} /> */}
         
+            <CarouselDemo/>
           </div>
         </div>
       </section>
@@ -421,6 +426,9 @@ export default function LandingPage() {
                 
               </p>
               <ReadMore id={""} text={""} />
+              {/* ReadMore */}
+              { <div >
+              
               <h3 className="text-2xl pt-12 font-bold mb-8">Key Features:</h3>
               <ul className="list-disc flex md:flex-row flex-col space-y-2 gap-8">
                 <li className="flex gap-2">
@@ -444,6 +452,8 @@ export default function LandingPage() {
                   </p>
                 </li>
               </ul>
+
+              </div> }
             </div>
             <h2 className="text-4xl font-bold mt-20 mb-6">Super 30 Batch</h2>
             <div className="glass-effect text-left p-8 rounded-xl">

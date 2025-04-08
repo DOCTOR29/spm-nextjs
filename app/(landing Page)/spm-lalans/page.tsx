@@ -68,6 +68,7 @@ export default function LandingPage() {
     
       className="relative  hero-pattern py-24 text-white">
         
+     <img className="z-10" src="/spm-and-lalans-logo-removebg-preview.png" alt="" />
         <div  style={{ backgroundImage: "url('/banner/hero.jpeg')",  backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat" }} className="absolute inset-0 bg-primary/90">

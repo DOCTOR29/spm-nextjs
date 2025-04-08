@@ -106,7 +106,7 @@ function Page() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Program 1 */}
-            {/* <div className="bg-white flex flex-col h-full rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="bg-white flex flex-col h-full rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               <div className="bg-green-700 w-full text-white p-4">
                 <h3 className="text-xl font-bold">Super 30 (Medical)</h3>
                 <p className="text-sm">For NEET Aspirants</p>
@@ -133,7 +133,7 @@ function Page() {
                   Apply Now
                 </a>
               </div>
-            </div> */}
+            </div>
 
             {/* Program 2 */}
             <div className="bg-white flex flex-col h-full rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">

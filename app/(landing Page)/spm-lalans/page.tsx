@@ -69,10 +69,11 @@ export default function LandingPage() {
       className="relative  hero-pattern py-24 text-white">
         
      <img className="z-10" src="/spm-and-lalans-logo-removebg-preview.png" alt="" />
-        <div  style={{ backgroundImage: "url('/banner/hero.jpeg')",  backgroundSize: "cover",
+     <div  style={{ backgroundImage: "url('/banner/hero.jpeg')",  backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat" }} className="absolute inset-0 bg-primary/90">
-     <img src="/banner/side.jpg" className="object-cover object-bottom  h-full  w-1/2" alt="" />
+  
+     <img src="/banner/side.jpg" className="object-cover object-bottom rounded-xl md:h-full p-10   md:p-0 md:w-1/2" alt="" />
   </div>
         <div className="container mx-auto px-6 relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">

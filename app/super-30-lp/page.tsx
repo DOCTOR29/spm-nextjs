@@ -74,7 +74,7 @@ function Page() {
 
 
       {/* <OpenRegDialog title={'Apply Now'} super30={true} /> */}
-      {/* <a href="https://spmandlalans.com/courses" target='_parent'  className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">Explore Programs</a>
+      {/* <a href="https://spmandlalans.com/courses" taSuper 30 (Medical) - NEETget='_parent'  className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">Explore Programs</a>
           </div>
         </div> */}
       {/* </section> */}

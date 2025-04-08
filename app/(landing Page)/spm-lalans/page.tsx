@@ -240,14 +240,15 @@ export default function LandingPage() {
             ].map((benefit, index) => (
               <Card
                 key={index}
-                className="p-8 card-hover bg-white/80 backdrop-blur-sm relative overflow-hidden"
+                className="p-8 card-hover  relative overflow-hidden shadow-lg"
                 style={{
                   backgroundImage: `url(${benefit.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
+                 
                 }}
               >
-                <div className="absolute inset-0 bg-white/90 z-0"></div>
+                <div className="absolute inset-0 bg-white/70 z-0"></div>
                 <div className="relative z-10">
                   <div className="mb-6 flex justify-center">
                     <div className="p-4 rounded-full bg-white shadow-lg">

@@ -188,6 +188,7 @@ export default function LandingPage() {
                   "Learn from experienced educators with a proven track record in mentoring students for competitive exams",
                 bullet2:
                   "Receive personalized attention tailored to individual learning styles and needs",
+                bgImage: "/card/Expert-Faculty.jpg"
               },
               {
                 icon: <BookOpen className="h-12 w-12 text-accent2" />,
@@ -196,6 +197,7 @@ export default function LandingPage() {
                   "Updated study material across subjects. Regular mock tests & quizzes.",
                 bullet2:
                   "Benefit from regular mock tests and quizzes to assess progress and identify areas for improvement.",
+                bgImage: "/card/Comprehensive-Study-Material.jpg"
               },
               {
                 icon: <BrainCircuit className="h-12 w-12 text-accent3" />,
@@ -204,6 +206,7 @@ export default function LandingPage() {
                   "Engage in live and recorded lectures designed to enhance understanding and retention.",
                 bullet2:
                   "Participate in doubt-clearing sessions and one-on-one mentorship to address specific challenges.",
+                bgImage: "/card/Interactive-Learning-Environment.jpg"
               },
               {
                 icon: <Trophy className="h-12 w-12 text-accent4" />,
@@ -212,6 +215,7 @@ export default function LandingPage() {
                   "Join a community of successful alumni who have secured top ranks in various competitive exams.",
                 bullet2:
                   "Leverage our consistent history of high success rates to boost your confidence and performance. ",
+                bgImage: "/card/Proven-Track-Record.jpg"
               },
               {
                 icon: <Wallet className="h-12 w-12 text-accent1" />,
@@ -220,6 +224,7 @@ export default function LandingPage() {
                   "Experience quality education at competitive prices with flexible payment options.",
                 bullet2:
                   "Choose from a variety of courses tailored to fit different schedules and learning preferences.",
+                bgImage: "/card/Affordable-and-Flexible-Programs.jpg"
               },
               {
                 icon: <Home className="h-12 w-12 text-accent2" />,
@@ -230,27 +235,36 @@ export default function LandingPage() {
                   "Enjoy nutritious meals, fully surveillance security and dedicated study spaces for uninterrupted learning.",
                 bullet3:
                   "Access round-the-clock medical assistance and a supportive faculty for a home-like experience",
+                bgImage: "/card/Residential-Facilities.jpg"
               },
             ].map((benefit, index) => (
               <Card
                 key={index}
-                className="p-8 card-hover bg-white/80 backdrop-blur-sm"
+                className="p-8 card-hover bg-white/80 backdrop-blur-sm relative overflow-hidden"
+                style={{
+                  backgroundImage: `url(${benefit.bgImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
               >
-                <div className="mb-6 flex justify-center">
-                  <div className="p-4 rounded-full bg-white shadow-lg">
-                    {benefit.icon}
+                <div className="absolute inset-0 bg-white/90 z-0"></div>
+                <div className="relative z-10">
+                  <div className="mb-6 flex justify-center">
+                    <div className="p-4 rounded-full bg-white shadow-lg">
+                      {benefit.icon}
+                    </div>
                   </div>
+                  <h3 className="mb-4 text-2xl font-bold text-primary">
+                    {benefit.title}
+                  </h3>
+                  <ul className="list-disc">
+                    <li className="text-gray-600">{benefit.bullet1}</li>
+                    <li className="text-gray-600">{benefit.bullet2}</li>
+                    {benefit.bullet3 && (
+                      <li className="text-gray-600">{benefit.bullet3}</li>
+                    )}
+                  </ul>
                 </div>
-                <h3 className="mb-4 text-2xl font-bold text-primary">
-                  {benefit.title}
-                </h3>
-                <ul className="list-disc">
-                  <li className="text-gray-600">{benefit.bullet1}</li>
-                  <li className="text-gray-600">{benefit.bullet2}</li>
-                  {benefit.bullet3 && (
-                    <li className="text-gray-600">{benefit.bullet3}</li>
-                  )}
-                </ul>
               </Card>
             ))}
           </div>
@@ -449,7 +463,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="md:text-6xl text-3xl font-bold mb-20">
-              Dream big, achieve more: Additional Programs at SPM & LALAN’S
+              Dream big, achieve more: Additional Programs at SPM & LALAN'S
               Coaching
             </h2>
             <div className="text-left text-lg">

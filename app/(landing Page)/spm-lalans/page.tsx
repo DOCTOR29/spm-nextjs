@@ -53,89 +53,119 @@ import { useState } from "react";
 const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
 
-const teachers =['./Teacher/1.webp','./Teacher/2.webp','./Teacher/3.webp','./Teacher/4.webp','./Teacher/5.webp','./Teacher/6.webp','./Teacher/7.webp', './Teacher/8.webp']
-const topper =['./Topper/1.png','./Topper/2.png','./Topper/3.png','./Topper/4.png','./Topper/5.png','./Topper/6.png','./Topper/7.png', './Topper/8.png']
-
-
+const teachers = [
+  "./Teacher/1.webp",
+  "./Teacher/2.webp",
+  "./Teacher/3.webp",
+  "./Teacher/4.webp",
+  "./Teacher/5.webp",
+  "./Teacher/6.webp",
+  "./Teacher/7.webp",
+  "./Teacher/8.webp",
+];
+const topper = [
+  "./Topper/1.png",
+  "./Topper/2.png",
+  "./Topper/3.png",
+  "./Topper/4.png",
+  "./Topper/5.png",
+  "./Topper/6.png",
+  "./Topper/7.png",
+  "./Topper/8.png",
+];
 
 export default function LandingPage() {
-  const [isReadMore, setisReadMore] = useState(false)
-  const [isReadMoreSuper, setisReadMoreSuper] = useState(false)
+  const [isReadMore, setisReadMore] = useState(false);
+  const [isReadMoreSuper, setisReadMoreSuper] = useState(false);
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section 
-    
-      className="relative  hero-pattern py-24 text-white">
-        
-     <img className="z-10" src="/spm-and-lalans-logo-removebg-preview.png" alt="" />
-     <div  style={{ backgroundImage: "url('/banner/hero.jpeg')",  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat" }} className="absolute inset-0 bg-primary/90">
-  
-     <img src="/banner/side.jpg" className="object-cover object-bottom rounded-xl md:h-full p-10   md:p-0 md:w-1/2" alt="" />
-  </div>
+      <section className="relative  hero-pattern py-24 text-white">
+        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-r from-[#F4D605] via-[#FFD700] to-[#DAA520] z-20 flex items-center justify-center shadow-lg">
+          <img
+            className="h-10 w-auto"
+            src="/spm-and-lalans-logo-removebg-preview.png"
+            alt="spm and lalans logo"
+          />
+        </div>
+        {/* background water */}
+        <div
+          style={{
+            backgroundImage: "url('/banner/hero.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="absolute inset-0 bg-primary/90"
+        ></div>
         <div className="container mx-auto px-6 relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            
-            <div   className="text-left">
-           
+            <div className="text-left banner-fade-in">
               <div className="animate-float mb-8">
-               
-                {/* <GraduationCap className="h-20 w-20 text-secondary" /> */}
+                
               </div>
-             
-              {/* <h1 className="mb-6 text-4xl font-bold md:text-6xl">
-                Empowering Students for Excellence in Competitive Exams at
-                <span className="block gradient-text mt-2 text-5xl md:text-7xl font-extrabold">
-                  SPM & LALAN&apos;S Coaching
+
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Empowering Students for 
+                <span className="gradient-text block mt-2">
+                  Academic Excellence
                 </span>
-              </h1> */}
-              {/* <p className="mb-8 text-lg opacity-90 glass-effect p-6 rounded-xl">
-                Welcome to SPM & Lalan&apos;s Coaching for
-                Success—Guwahati&apos;s No.1 Institute for JEE, NEET, Olympiad,
-                NTSE, CUET, & More!
-              </p> */}
+              </h1>
+
+              <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                Welcome to Guwahati's Premier Institute for JEE, NEET, Olympiad, NTSE, CUET & More. Join us to transform your academic journey and achieve your dreams.
+              </p>
+
+              <img
+                src="/banner/side.jpg"
+                className="rounded-xl shadow-2xl hover:shadow-accent1/20 transition-all duration-300 w-full md:max-w-md"
+                alt="Students studying"
+              />
             </div>
-            
-            <div className="glass-effect p-8 rounded-xl backdrop-blur-md">
-              <h3 className="text-2xl font-bold mb-6 text-center">
-                Start Your Journey Today
+
+            <div className="glass-effect p-8 rounded-xl backdrop-blur-md shadow-xl hover:shadow-accent2/20 transition-all duration-300 banner-fade-in">
+              <h3 className="text-2xl font-bold mb-8 text-center gradient-text">
+                Begin Your Success Story
               </h3>
-              <form className="space-y-4">
-                <div>
+              <form className="space-y-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-white/90">Full Name</label>
                   <Input
-                    placeholder="Your Name"
-                    className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70"
+                    placeholder="Enter your name"
+                    className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70 h-12"
                   />
                 </div>
                 
-                <div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-white/90">Phone Number</label>
+                  <Input
+                    type="tel"
+                    placeholder="Enter your phone number"
+                    className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/70 h-12"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-white/90">Select Course</label>
                   <Select>
-                    <SelectTrigger className="w-full bg-white/10 border-white/20 ">
-                      <SelectValue placeholder="Select a Course" />
+                    <SelectTrigger className="w-full bg-white/10 border-white/20 h-12">
+                      <SelectValue placeholder="Choose your course" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
-                        <SelectLabel>Courses</SelectLabel>
-                        <SelectItem value="apple">JEE</SelectItem>
-                        <SelectItem value="banana">NEET</SelectItem>
-                        <SelectItem value="blueberry">Olympiad</SelectItem>
-                        <SelectItem value="grapes">NTSE</SelectItem>
-                        <SelectItem value="pineapple">CUET</SelectItem>
+                        <SelectLabel>Available Courses</SelectLabel>
+                        <SelectItem value="jee">JEE Preparation</SelectItem>
+                        <SelectItem value="neet">NEET Coaching</SelectItem>
+                        <SelectItem value="olympiad">Olympiad Training</SelectItem>
+                        <SelectItem value="ntse">NTSE Guidance</SelectItem>
+                        <SelectItem value="cuet">CUET Preparation</SelectItem>
                       </SelectGroup>
                     </SelectContent>
                   </Select>
                 </div>
-                <Button className="w-full bg-secondary text-primary hover:bg-secondary/90 text-lg py-6 shadow-glow transform hover:scale-105 transition-all">
-                  Apply Now
+
+                <Button className="w-full bg-secondary text-primary hover:bg-secondary/90 text-lg py-6 font-semibold shadow-glow transform hover:scale-105 transition-all duration-300">
+                  Start Your Journey
                 </Button>
               </form>
             </div>
@@ -239,8 +269,8 @@ export default function LandingPage() {
 
           <EmblaCarousel slides={topper} teacher={true} options={OPTIONS} />
           {/* </div> */}
-          
-            {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+
+          {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-2">1000+</h3>
               <p className="text-gray-600">NEET Qualifiers</p>
@@ -250,8 +280,7 @@ export default function LandingPage() {
               <h3 className="text-3xl font-bold mb-2">95%</h3>
               <p className="text-gray-600">Success Rate</p>
             </Card> */}
-          
-         
+
           {/* <div className="grid gap-8   md:grid-cols-3">
             <img src="/Topper/1.png" className="h-full  card-hover  " alt="" />
             <img src="/Topper/2.png" className="h-fit card-hover " alt="" />
@@ -266,7 +295,7 @@ export default function LandingPage() {
             <img src="/Topper/11.png" className="h-fit card-hover " alt="" />
             <img src="/Topper/12.png" className="h-fit card-hover " alt="" /> */}
 
-            {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+          {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
               <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-2">1000+</h3>
               <p className="text-gray-600">NEET Qualifiers</p>
@@ -283,8 +312,8 @@ export default function LandingPage() {
             </h1>
 
             {/* <EmblaCarousel slides={testimonials} options={OPTIONS} /> */}
-        
-            <CarouselDemo/>
+
+            <CarouselDemo />
           </div>
         </div>
       </section>
@@ -295,9 +324,7 @@ export default function LandingPage() {
           <h2 className="text-4xl font-bold text-center mb-12">
             <span className="gradient-text">Our Comprehensive Courses</span>
           </h2>
-          <div className="py-14 text-gray-700">
-            
-          </div>
+          <div className="py-14 text-gray-700"></div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
@@ -405,10 +432,10 @@ export default function LandingPage() {
         <div className="container mx-auto px-6  bg-amber-100 py-10 rounded-2xl">
           <div className="flex flex-col gap-10 text-xl font-medium">
             <p>
-              At <strong>SPM & LALAN's</strong> Coaching, we are committed to providing
-              comprehensive programs that cater to the diverse needs of our
-              students. In addition to our core offerings, we are proud to
-              introduce the following specialized programs:​
+              At <strong>SPM & LALAN's</strong> Coaching, we are committed to
+              providing comprehensive programs that cater to the diverse needs
+              of our students. In addition to our core offerings, we are proud
+              to introduce the following specialized programs:​
             </p>
             <Button className="text-white w-fit mx-auto">Apply Now!</Button>
             {/* CTA Button to be added */}
@@ -436,75 +463,128 @@ export default function LandingPage() {
                 program is structured to align with the learning stages of
                 classes 8–10 (foundational phase) and classes 11–12 (advanced
                 phase).​
-                
               </p>
               <ReadMore id={""} text={""} />
               {/* ReadMore */}
-              { isReadMore && <div >
-              
-              <h3 className="text-2xl pt-12 font-bold mb-8">Key Features:</h3>
-              <ul className="list-disc flex md:flex-row flex-col space-y-2 gap-8">
-                <li className="flex gap-2">
-                <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                 <p>
-                  
-                  Classes 8–10: Focus on strengthening core concepts in Physics,
-                  Chemistry, Mathematics, and Biology, with an introduction to
-                  problem-solving strategies for Olympiads and NTSE to build
-                  analytical skills.​
-                  </p>
-                </li>
+              {isReadMore && (
+                <div>
+                  <h3 className="text-2xl pt-12 font-bold mb-8">
+                    Key Features:
+                  </h3>
+                  <ul className="list-disc flex md:flex-row flex-col space-y-2 gap-8">
+                    <li className="flex gap-2">
+                      <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
+                      <p>
+                        Classes 8–10: Focus on strengthening core concepts in
+                        Physics, Chemistry, Mathematics, and Biology, with an
+                        introduction to problem-solving strategies for Olympiads
+                        and NTSE to build analytical skills.​
+                      </p>
+                    </li>
 
-                <li className="flex gap-2 ">
-                  <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                  <p>
-                  Classes 11–12: Advanced coaching modules for NEET, JEE
-                  (Main/Advanced), and CUET integrated with the board syllabus,
-                  including weekly doubt-clearing sessions and mock tests
-                  mirroring actual exam patterns.​
-                  </p>
-                </li>
-              </ul>
-
-              </div> }
-              <div  onClick={() => setisReadMore(!isReadMore)}> <Button className="text-white" variant={"link"}>{isReadMore ?<> <ChevronUp />Read More</> : <> <ChevronDown /> Read Less</>} </Button> </div>
-              
+                    <li className="flex gap-2 ">
+                      <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
+                      <p>
+                        Classes 11–12: Advanced coaching modules for NEET, JEE
+                        (Main/Advanced), and CUET integrated with the board
+                        syllabus, including weekly doubt-clearing sessions and
+                        mock tests mirroring actual exam patterns.​
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              )}
+              <div onClick={() => setisReadMore(!isReadMore)}>
+                {" "}
+                <Button className="text-white" variant={"link"}>
+                  {isReadMore ? (
+                    <>
+                      {" "}
+                      <ChevronUp />
+                      Read More
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      <ChevronDown /> Read Less
+                    </>
+                  )}{" "}
+                </Button>{" "}
+              </div>
             </div>
             <h2 className="text-4xl font-bold mt-20 mb-6">Super 30 Batch</h2>
             <div className="glass-effect text-left p-8 rounded-xl">
               <Star className="h-16 w-16 text-secondary mx-auto mb-6" />
               <p className="text-lg mb-6 ">
-              The Super 30 Batch is a prestigious scholarship program designed to support 90 meritorious students (30 each for Medical, Engineering, and Integrated streams) by providing 100% free tuition, study materials, and personalized mentorship. This initiative aims to empower talented aspirants to achieve top ranks in JEE and NEET examinations
+                The Super 30 Batch is a prestigious scholarship program designed
+                to support 90 meritorious students (30 each for Medical,
+                Engineering, and Integrated streams) by providing 100% free
+                tuition, study materials, and personalized mentorship. This
+                initiative aims to empower talented aspirants to achieve top
+                ranks in JEE and NEET examinations
               </p>
-                {isReadMoreSuper &&
-              <ul className="space-y-4 text-left mb-8">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                  <span>Full Scholarship: Comprehensive coverage of tuition fees and academic resources.​
-                  </span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                  <span>Expert Faculty: Guidance from experienced educators with a proven track record in mentoring students for competitive exams.​
-                  </span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                  <span>Personalized Mentorship: Individual attention to address unique learning needs and challenges.​</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                  <span>Residential Program: Provision of comfortable hostel facilities, ensuring a conducive learning environment.​
-                  ​</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                  <span>Nutritious Meals: Daily provision of wholesome and balanced meals to support students' health and well-being.
-                  ​</span>
-                </li>
-              </ul>}
-              <div  onClick={() => setisReadMoreSuper(!isReadMoreSuper)}> <Button className="text-white" variant={"link"}>{isReadMoreSuper ?<> <ChevronUp />Read More</> : <> <ChevronDown /> Read Less</>} </Button> </div>
-              <p className="py-10">These additional programs reflect our dedication to nurturing academic excellence and providing opportunities for all students to succeed.
+              {isReadMoreSuper && (
+                <ul className="space-y-4 text-left mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
+                    <span>
+                      Full Scholarship: Comprehensive coverage of tuition fees
+                      and academic resources.​
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
+                    <span>
+                      Expert Faculty: Guidance from experienced educators with a
+                      proven track record in mentoring students for competitive
+                      exams.​
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
+                    <span>
+                      Personalized Mentorship: Individual attention to address
+                      unique learning needs and challenges.​
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
+                    <span>
+                      Residential Program: Provision of comfortable hostel
+                      facilities, ensuring a conducive learning environment.​ ​
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
+                    <span>
+                      Nutritious Meals: Daily provision of wholesome and
+                      balanced meals to support students' health and well-being.
+                      ​
+                    </span>
+                  </li>
+                </ul>
+              )}
+              <div onClick={() => setisReadMoreSuper(!isReadMoreSuper)}>
+                {" "}
+                <Button className="text-white" variant={"link"}>
+                  {isReadMoreSuper ? (
+                    <>
+                      {" "}
+                      <ChevronUp />
+                      Read More
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      <ChevronDown /> Read Less
+                    </>
+                  )}{" "}
+                </Button>{" "}
+              </div>
+              <p className="py-10">
+                These additional programs reflect our dedication to nurturing
+                academic excellence and providing opportunities for all students
+                to succeed.
               </p>
               <Button className="bg-secondary text-primary hover:bg-secondary/90">
                 Apply for Super 30
@@ -513,17 +593,16 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-{/* Teacher List */}
-      <section className="py-20  bg-gradient-to-br from-primary/5 to-secondary/5" >
-      <div className="container mx-auto px-6 relative">
-      <div className="max-w-6xl gradient-text text-3xl md:text-6xl py-10 md:py-20 font-bold   mx-auto text-center">
-      Guiding Minds, Shaping Futures – Meet Our Expert Faculties at SPM & Lalan's
-  
-      </div>
-      <EmblaCarousel slides={teachers} teacher={true} options={OPTIONS} />
-      </div>  
+      {/* Teacher List */}
+      <section className="py-20  bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-6xl gradient-text text-3xl md:text-6xl py-10 md:py-20 font-bold   mx-auto text-center">
+            Guiding Minds, Shaping Futures – Meet Our Expert Faculties at SPM &
+            Lalan's
+          </div>
+          <EmblaCarousel slides={teachers} teacher={true} options={OPTIONS} />
+        </div>
       </section>
-
 
       {/* Final CTA Section */}
 

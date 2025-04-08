@@ -179,9 +179,15 @@
 }
 
 .gradient-text {
-  background: linear-gradient(45deg, #F8DB06, #ff9d00);
+  background: linear-gradient(to right, #FFD700, #DAA520);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .shadow-glow {
@@ -196,15 +202,34 @@
   0% {
     transform: translateY(0px);
   }
-
   50% {
     transform: translateY(-20px);
   }
-
   100% {
     transform: translateY(0px);
   }
 }
+
+.banner-fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parallax-bg {
+  transform: translateY(var(--parallax-offset, 0));
+  transition: transform 0.1s ease-out;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(100%);

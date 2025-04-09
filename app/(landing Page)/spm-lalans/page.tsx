@@ -50,6 +50,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import { ReadMore } from "./components/ReadMore";
 import { CarouselDemo } from "./components/carouselTestimonials";
 import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
 
@@ -248,7 +249,7 @@ export default function LandingPage() {
                  
                 }}
               >
-                <div className="absolute inset-0 bg-white/70 z-0"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-white/10 z-0"></div>
                 <div className="relative z-10">
                   <div className="mb-6 flex justify-center">
                     <div className="p-4 rounded-full bg-white shadow-lg">
@@ -258,11 +259,11 @@ export default function LandingPage() {
                   <h3 className="mb-4 text-2xl font-bold text-primary">
                     {benefit.title}
                   </h3>
-                  <ul className="list-disc">
-                    <li className="text-gray-600">{benefit.bullet1}</li>
-                    <li className="text-gray-600">{benefit.bullet2}</li>
+                  <ul className="list-disc font-bold">
+                    <li className="text-gray-800">{benefit.bullet1}</li>
+                    <li className="text-gray-800">{benefit.bullet2}</li>
                     {benefit.bullet3 && (
-                      <li className="text-gray-600">{benefit.bullet3}</li>
+                      <li className="text-gray-800">{benefit.bullet3}</li>
                     )}
                   </ul>
                 </div>
@@ -340,105 +341,138 @@ export default function LandingPage() {
             <span className="gradient-text">Our Comprehensive Courses</span>
           </h2>
           <div className="py-14 text-gray-700"></div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                icon: <School className="h-16 w-16 text-accent1" />,
-                title: "Pre-Foundation Course",
-                subtitle:
-                  "Designed for students in classes 8 to 10, this course focuses on building a strong conceptual base in subjects like Physics, Chemistry, Mathematics, and Biology, preparing them for future competitive exams.",
-                description: [
-                  "Conceptual learning, Olympiads & NTSE prep",
-                  "Exposure to problem-solving techniques.",
-                  "Preparation for Olympiads and NTSE examinations.",
-                ],
-              },
-              {
-                icon: <BookCheck className="h-16 w-16 text-accent2" />,
-                title: "Foundation Course",
-                subtitle:
-                  "Aimed at students in classes 11 and 12, this course integrates the board syllabus with advanced topics, equipping students for competitive exams like JEE (Main/Advanced), NEET, and CUET.",
-                description: [
-                  "Comprehensive coverage of both board and competitive exam syllabi.",
-                  "Regular assessments and mock tests.",
-                  "Personalized mentorship and doubt-clearing sessions.",
-                ],
-              },
-              {
-                icon: <Brain className="h-16 w-16 text-accent3" />,
-                title: "Fresher Course",
-                subtitle:
-                  "Tailored for students who have recently completed their class 12 exams and are preparing for their first attempt at competitive exams. This intensive curriculum bridges gaps and enhances understanding.",
-                description: [
-                  "Focused preparation for JEE, NEET, and other entrance exams.",
-                  "In-depth concept clarification and application.",
-                  "Time management and exam strategy sessions.",
-                ],
-              },
-              {
-                icon: <Target className="h-16 w-16 text-accent4" />,
-                title: "Dropper Course",
-                subtitle:
-                  "A one-year program designed for students who have completed their 12th-grade exams but wish to dedicate an additional year to improve their scores in competitive exams like JEE and NEET.",
-                description: [
-                  "Expert faculty with extensive experience in competitive exam coaching.",
-                  "Regular mock tests to simulate exam conditions and track progress.",
-                  "Personalized attention and doubt-clearing sessions to address individual challenges.",
-                ],
-              },
-              {
-                icon: <Rocket className="h-16 w-16 text-accent1" />,
-                title: "Crash Course",
-                subtitle:
-                  "An intensive short-term program aimed at thorough revision and practice before the examination season. Ideal for students seeking to consolidate their knowledge and boost their confidence",
-                description: [
-                  "Rapid coverage of key topics and concepts.",
-                  " Extensive practice through mock tests and previous years' question papers.",
-                  "Strategies for effective time management during exams.",
-                ],
-              },
-              {
-                icon: <Rocket className="h-16 w-16 text-accent1" />,
-                title: "Capsule Course",
-                subtitle:
-                  "A focused program designed to provide in-depth coverage of specific subjects or topics within a limited timeframe, catering to students who need targeted assistance.",
-                description: [
-                  "Concentrated study sessions on selected topics.",
-                  "Interactive classes with an emphasis on problem-solving.",
-                  "Ideal for students looking to strengthen particular areas of weakness",
-                ],
-              },
-              {
-                icon: <FileText className="h-16 w-16 text-accent2" />,
-                title: "CUET Preparation",
-                subtitle:
-                  "A structured coaching program designed to help students excel in CUET, ensuring admission to top central universities.",
-                description: [
-                  "Comprehensive subject coverage with expert guidance.",
-                  "Strategic test preparation with mock exams and practice sessions.",
-                  "Personalized mentoring to enhance problem-solving and time management skills.",
-                ],
-              },
-            ].map((course, index) => (
-              <Card
-                key={index}
-                className="p-8 card-hover bg-white/80 backdrop-blur-sm"
-              >
-                <div className="mb-6">{course.icon}</div>
-                <h3 className="text-2xl font-bold mb-2 text-primary">
-                  {course.title}
-                </h3>
-                <h4 className="text-lg font-semibold mb-4 text-accent1">
-                  {course.subtitle}
-                </h4>
-                <ul className="text-gray-600">
-                  {course.description.map((desc) => (
-                    <li className="list-disc">{desc}</li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
+          <Tabs defaultValue="pre-foundation" className="w-full">
+            <TabsList className="flex w-full flex-wrap ">
+              <TabsTrigger value="pre-foundation" className="px-4 py-2 text-accent1 hover:bg-accent1/10">Pre-Foundation</TabsTrigger>
+              <TabsTrigger value="foundation" className="px-4 py-2 text-accent2 hover:bg-accent2/10">Foundation</TabsTrigger>
+              <TabsTrigger value="fresher" className="px-4 py-2 text-accent3 hover:bg-accent3/10">Fresher</TabsTrigger>
+              <TabsTrigger value="dropper" className="px-4 py-2 text-purple-500 hover:bg-purple-500/10">Dropper</TabsTrigger>
+              <TabsTrigger value="crash" className="px-4 py-2 text-orange-500 hover:bg-orange-500/10">Crash Course</TabsTrigger>
+              <TabsTrigger value="capsule" className="px-4 py-2 text-teal-500 hover:bg-teal-500/10">Capsule</TabsTrigger>
+              <TabsTrigger value="cuet" className="px-4 py-2 text-pink-500 hover:bg-pink-500/10">CUET</TabsTrigger>
+            </TabsList>
+
+            <div className="mt-8">
+              <TabsContent value="pre-foundation">
+                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <School className="h-16 w-16 text-accent1" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-primary">Pre-Foundation Course</h3>
+                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                    Designed for students in classes 8 to 10, this course focuses on building a strong conceptual base in subjects like Physics, Chemistry, Mathematics, and Biology, preparing them for future competitive exams.
+                  </h4>
+                  <ul className="text-gray-600 space-y-2 pl-4">
+                    <li className="list-disc">Conceptual learning, Olympiads & NTSE prep</li>
+                    <li className="list-disc">Exposure to problem-solving techniques.</li>
+                    <li className="list-disc">Preparation for Olympiads and NTSE examinations.</li>
+                  </ul>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="foundation">
+                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <BookCheck className="h-16 w-16 text-accent2" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-primary">Foundation Course</h3>
+                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                    Aimed at students in classes 11 and 12, this course integrates the board syllabus with advanced topics, equipping students for competitive exams like JEE (Main/Advanced), NEET, and CUET.
+                  </h4>
+                  <ul className="text-gray-600 space-y-2 pl-4">
+                    <li className="list-disc">Comprehensive coverage of both board and competitive exam syllabi.</li>
+                    <li className="list-disc">Regular assessments and mock tests.</li>
+                    <li className="list-disc">Personalized mentorship and doubt-clearing sessions.</li>
+                  </ul>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="fresher">
+                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <Brain className="h-16 w-16 text-accent3" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-primary">Fresher Course</h3>
+                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                    Tailored for students who have recently completed their class 12 exams and are preparing for their first attempt at competitive exams. This intensive curriculum bridges gaps and enhances understanding.
+                  </h4>
+                  <ul className="text-gray-600 space-y-2 pl-4">
+                    <li className="list-disc">Focused preparation for JEE, NEET, and other entrance exams.</li>
+                    <li className="list-disc">In-depth concept clarification and application.</li>
+                    <li className="list-disc">Time management and exam strategy sessions.</li>
+                  </ul>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="dropper">
+                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <Target className="h-16 w-16 text-accent4" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-primary">Dropper Course</h3>
+                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                    A one-year program designed for students who have completed their 12th-grade exams but wish to dedicate an additional year to improve their scores in competitive exams like JEE and NEET.
+                  </h4>
+                  <ul className="text-gray-600 space-y-2 pl-4">
+                    <li className="list-disc">Expert faculty with extensive experience in competitive exam coaching.</li>
+                    <li className="list-disc">Regular mock tests to simulate exam conditions and track progress.</li>
+                    <li className="list-disc">Personalized attention and doubt-clearing sessions to address individual challenges.</li>
+                  </ul>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="crash">
+                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <Rocket className="h-16 w-16 text-accent1" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-primary">Crash Course</h3>
+                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                    An intensive short-term program aimed at thorough revision and practice before the examination season. Ideal for students seeking to consolidate their knowledge and boost their confidence
+                  </h4>
+                  <ul className="text-gray-600 space-y-2 pl-4">
+                    <li className="list-disc">Rapid coverage of key topics and concepts.</li>
+                    <li className="list-disc">Extensive practice through mock tests and previous years' question papers.</li>
+                    <li className="list-disc">Strategies for effective time management during exams.</li>
+                  </ul>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="capsule">
+                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <Rocket className="h-16 w-16 text-accent1" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-primary">Capsule Course</h3>
+                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                    A focused program designed to provide in-depth coverage of specific subjects or topics within a limited timeframe, catering to students who need targeted assistance.
+                  </h4>
+                  <ul className="text-gray-600 space-y-2 pl-4">
+                    <li className="list-disc">Concentrated study sessions on selected topics.</li>
+                    <li className="list-disc">Interactive classes with an emphasis on problem-solving.</li>
+                    <li className="list-disc">Ideal for students looking to strengthen particular areas of weakness</li>
+                  </ul>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="cuet">
+                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-6">
+                    <FileText className="h-16 w-16 text-accent2" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-primary">CUET Preparation</h3>
+                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                    A structured coaching program designed to help students excel in CUET, ensuring admission to top central universities.
+                  </h4>
+                  <ul className="text-gray-600 space-y-2 pl-4">
+                    <li className="list-disc">Comprehensive subject coverage with expert guidance.</li>
+                    <li className="list-disc">Strategic test preparation with mock exams and practice sessions.</li>
+                    <li className="list-disc">Personalized mentoring to enhance problem-solving and time management skills.</li>
+                  </ul>
+                </Card>
+              </TabsContent>
+            </div>
+          </Tabs>
         </div>
       </section>
       {/* Section SPM & Lalans*/}

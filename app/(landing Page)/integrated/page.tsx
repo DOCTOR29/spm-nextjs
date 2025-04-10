@@ -136,10 +136,25 @@ function App() {
               
             </div>
             <section className="section-pattern py-20">
-        <div className="container mx-auto px-6">
+        
+      </section>
+      <section>
+        
+      </section>
+            
+          </div>
+          
+        </div>
+      
+      </section>
+
+      {/* student Result */}
+<section className='py-26 bg-gray-50'>
+
+<div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
             <span className="gradient-text">
-              Our Results Speak for Themselves
+            Student Results
             </span>
           </h2>
           {/* <div className="md:hidden block "> */}
@@ -185,14 +200,7 @@ function App() {
           {/* </div> */}
          
         </div>
-      </section>
-            
-          </div>
-          
-        </div>
-      
-      </section>
-
+</section>
 
       {/* How It Works Section */}
       <section className="py-16 bg-gray-50">

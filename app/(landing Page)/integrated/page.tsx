@@ -396,7 +396,7 @@ function App() {
       <section className="py-16 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Start Your Journey?</h2>
-          <a href={urlAnchor} className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+          <a href={urlAnchor} target='_blank' className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
             Book Free Counselling Session
           </a>
         </div>

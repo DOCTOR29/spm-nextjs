@@ -83,9 +83,9 @@ function App() {
             <a href="#contact" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-3 rounded-md transition-colors text-lg">
               Book Free Counselling
             </a>
-            <a href="#courses" className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">
+            {/* <a href="#courses" className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">
               Explore Courses
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

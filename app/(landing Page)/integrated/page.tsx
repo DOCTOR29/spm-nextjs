@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { 
   BookOpen, 
@@ -14,23 +15,57 @@ import {
   MapPin
 } from 'lucide-react';
 
+import "./css/embla.css";
+import testimonials from "./components/data/testimonials.json";
+import EmblaCarousel from "./components/EmblaCorousel";
+import { EmblaOptionsType } from "embla-carousel";
+import { ReadMore } from "./components/ReadMore";
+import { CarouselDemo } from "./components/carouselTestimonials";
+const OPTIONS: EmblaOptionsType = { containScroll: false };
+const SLIDE_COUNT = 5;
+
+const teachers = [
+  "./Teacher/1.webp",
+  "./Teacher/2.webp",
+  "./Teacher/3.webp",
+  "./Teacher/4.webp",
+  "./Teacher/5.webp",
+  "./Teacher/6.webp",
+  "./Teacher/7.webp",
+  "./Teacher/8.webp",
+];
+const topper = [
+  "./Topper/1.png",
+  "./Topper/2.png",
+  "./Topper/3.png",
+  "./Topper/4.png",
+  "./Topper/5.png",
+  "./Topper/6.png",
+  "./Topper/7.png",
+  "./Topper/8.png",
+];
+
 function App() {
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white fixed w-full z-50">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center mb-4 md:mb-0">
-            <BookOpen className="h-8 w-8 mr-2" />
-            <h1 className="text-2xl font-bold">SPM & Lalan's Academy</h1>
-          </div>
-          <nav className="flex flex-wrap justify-center gap-6">
+        <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-r from-[#F4D605] via-[#FFD700] to-[#DAA520] z-20 flex items-center justify-center shadow-lg">
+          <img
+            className="h-10 w-auto"
+            src="/spm-and-lalans-logo-removebg-preview.png"
+            alt="spm and lalans logo"
+          />
+        </div>
+          {/* <nav className="flex flex-wrap justify-center gap-6">
             <a href="#courses" className="hover:text-blue-200 transition-colors">Courses</a>
             <a href="#facilities" className="hover:text-blue-200 transition-colors">Facilities</a>
             <a href="#testimonials" className="hover:text-blue-200 transition-colors">Testimonials</a>
             <a href="#faqs" className="hover:text-blue-200 transition-colors">FAQs</a>
             <a href="#contact" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded-md transition-colors font-semibold">Book Free Counselling</a>
-          </nav>
+          </nav> */}
         </div>
       </header>
 
@@ -98,10 +133,66 @@ function App() {
               </div>
               <h3 className="text-xl font-semibold mb-2">State-of-the-Art Infrastructure</h3>
               <p className="text-gray-600">Smart classrooms, labs, and hostel facilities.</p>
+              
             </div>
-          </div>
+            <section className="section-pattern py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            <span className="gradient-text">
+              Our Results Speak for Themselves
+            </span>
+          </h2>
+          {/* <div className="md:hidden block "> */}
+
+          <EmblaCarousel slides={topper} teacher={true} options={OPTIONS} />
+          {/* </div> */}
+
+          {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+              <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
+              <h3 className="text-3xl font-bold mb-2">1000+</h3>
+              <p className="text-gray-600">NEET Qualifiers</p>
+            </Card>
+            <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+              <Star className="h-16 w-16 text-accent3 mx-auto mb-6" />
+              <h3 className="text-3xl font-bold mb-2">95%</h3>
+              <p className="text-gray-600">Success Rate</p>
+            </Card> */}
+
+          {/* <div className="grid gap-8   md:grid-cols-3">
+            <img src="/Topper/1.png" className="h-full  card-hover  " alt="" />
+            <img src="/Topper/2.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/3.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/4.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/5.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/6.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/7.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/8.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/9.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/10.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/11.png" className="h-fit card-hover " alt="" />
+            <img src="/Topper/12.png" className="h-fit card-hover " alt="" /> */}
+
+          {/* <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+              <Award className="h-16 w-16 text-accent2 mx-auto mb-6" />
+              <h3 className="text-3xl font-bold mb-2">1000+</h3>
+              <p className="text-gray-600">NEET Qualifiers</p>
+            </Card>
+            <Card className="p-8 text-center card-hover bg-white/80 backdrop-blur-sm">
+              <Star className="h-16 w-16 text-accent3 mx-auto mb-6" />
+              <h3 className="text-3xl font-bold mb-2">95%</h3>
+              <p className="text-gray-600">Success Rate</p>
+            </Card> */}
+          {/* </div> */}
+         
         </div>
       </section>
+            
+          </div>
+          
+        </div>
+      
+      </section>
+
 
       {/* How It Works Section */}
       <section className="py-16 bg-gray-50">
@@ -246,7 +337,19 @@ function App() {
           </div>
         </div>
       </section>
+{/* Student Testimonial */}
+<section id="testimonial" className="py-16 bg-white">
 
+        <div className="text-center mt-8 flex flex-col items-center justify-center">
+            <h1 className="text-4xl pt-25 gradient-text font-bold">
+              Topper&apos;s Speak
+            </h1>
+
+            {/* <EmblaCarousel slides={testimonials} options={OPTIONS} /> */}
+
+            <CarouselDemo />
+          </div>
+</section>
       {/* FAQs Section */}
       <section id="faqs" className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -288,8 +391,8 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-              <div className="space-y-4">
+              <h3 className="text-2xl font-bold ">Get in Touch</h3>
+              {/* <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-blue-600 mr-4" />
                   <span>+91 1234567890</span>
@@ -302,7 +405,7 @@ function App() {
                   <MapPin className="h-6 w-6 text-blue-600 mr-4 mt-1" />
                   <span>123 Education Hub, Guwahati, Assam</span>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             <form className="space-y-6">
@@ -327,7 +430,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      {/* <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -380,7 +483,7 @@ function App() {
             <p className="text-gray-400">&copy; {new Date().getFullYear()} SPM & Lalan's Academy. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

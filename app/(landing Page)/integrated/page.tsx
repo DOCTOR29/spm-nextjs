@@ -50,7 +50,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white fixed w-full z-50">
+      {/* <header className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white fixed w-full z-50">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
         <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-r from-[#F4D605] via-[#FFD700] to-[#DAA520] z-20 flex items-center justify-center shadow-lg">
           <img
@@ -58,7 +58,7 @@ function App() {
             src="/spm-and-lalans-logo-removebg-preview.png"
             alt="spm and lalans logo"
           />
-        </div>
+        </div> */}
           {/* <nav className="flex flex-wrap justify-center gap-6">
             <a href="#courses" className="hover:text-blue-200 transition-colors">Courses</a>
             <a href="#facilities" className="hover:text-blue-200 transition-colors">Facilities</a>
@@ -66,8 +66,8 @@ function App() {
             <a href="#faqs" className="hover:text-blue-200 transition-colors">FAQs</a>
             <a href="#contact" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded-md transition-colors font-semibold">Book Free Counselling</a>
           </nav> */}
-        </div>
-      </header>
+        {/* </div>
+      </header> */}
 
       {/* Hero Section */}
       {/* <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white pt-32 pb-20">

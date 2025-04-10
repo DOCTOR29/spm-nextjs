@@ -42,6 +42,7 @@ import {
   Divide,
   ChevronUp,
   ChevronDown,
+  ArrowRight,
 } from "lucide-react";
 import "./css/embla.css";
 import testimonials from "./components/data/testimonials.json";
@@ -335,34 +336,34 @@ export default function LandingPage() {
       </section>
 
       {/* Courses Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
             <span className="gradient-text">Our Comprehensive Courses</span>
           </h2>
-          <div className="py-14 text-gray-700"></div>
-          <Tabs defaultValue="pre-foundation" className="w-full">
-            <TabsList className="flex w-full flex-wrap ">
-              <TabsTrigger value="pre-foundation" className="px-4 py-2 text-accent1 hover:bg-accent1/10">Pre-Foundation</TabsTrigger>
-              <TabsTrigger value="foundation" className="px-4 py-2 text-accent2 hover:bg-accent2/10">Foundation</TabsTrigger>
-              <TabsTrigger value="fresher" className="px-4 py-2 text-accent3 hover:bg-accent3/10">Fresher</TabsTrigger>
-              <TabsTrigger value="dropper" className="px-4 py-2 text-purple-500 hover:bg-purple-500/10">Dropper</TabsTrigger>
-              <TabsTrigger value="crash" className="px-4 py-2 text-orange-500 hover:bg-orange-500/10">Crash Course</TabsTrigger>
-              <TabsTrigger value="capsule" className="px-4 py-2 text-teal-500 hover:bg-teal-500/10">Capsule</TabsTrigger>
-              <TabsTrigger value="cuet" className="px-4 py-2 text-pink-500 hover:bg-pink-500/10">CUET</TabsTrigger>
+          <div className="py-8 md:py-14 text-gray-700"></div>
+          <Tabs defaultValue="pre-foundation" className="w-full ">
+            <TabsList className="flex w-full     flex-wrap justify-center gap-2">
+              <TabsTrigger value="pre-foundation" className=" text-sm md:text-base w-[calc(50%-4px)] md:w-auto px-3 py-2 text-accent1 hover:bg-accent1/10">Pre-Foundation</TabsTrigger>
+              <TabsTrigger value="foundation" className="text-sm md:text-base w-[calc(50%-4px)] md:w-auto px-3 py-2 text-accent2 hover:bg-accent2/10">Foundation</TabsTrigger>
+              <TabsTrigger value="fresher" className="text-sm md:text-base w-[calc(50%-4px)] md:w-auto px-3 py-2 text-accent3 hover:bg-accent3/10">Fresher</TabsTrigger>
+              <TabsTrigger value="dropper" className="text-sm md:text-base w-[calc(50%-4px)] md:w-auto px-3 py-2 text-purple-500 hover:bg-purple-500/10">Dropper</TabsTrigger>
+              <TabsTrigger value="crash" className="text-sm md:text-base w-[calc(50%-4px)] md:w-auto px-3 py-2 text-orange-500 hover:bg-orange-500/10">Crash Course</TabsTrigger>
+              <TabsTrigger value="capsule" className="text-sm md:text-base w-[calc(50%-4px)] md:w-auto px-3 py-2 text-teal-500 hover:bg-teal-500/10">Capsule</TabsTrigger>
+              <TabsTrigger value="cuet" className="text-sm md:text-base w-[calc(50%-4px)] md:w-auto px-3 py-2 text-pink-500 hover:bg-pink-500/10">CUET</TabsTrigger>
             </TabsList>
 
-            <div className="mt-8">
+            <div className="mt-6 md:mt-8">
               <TabsContent value="pre-foundation">
-                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <School className="h-16 w-16 text-accent1" />
+                <Card className="p-4 mt-20 md:p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-4 md:mb-6">
+                    <School className="h-12 w-12 md:h-16 md:w-16 text-accent1 mx-auto" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-primary">Pre-Foundation Course</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">Pre-Foundation Course</h3>
+                  <h4 className="text-base md:text-lg font-semibold mb-4 text-accent1">
                     Designed for students in classes 8 to 10, this course focuses on building a strong conceptual base in subjects like Physics, Chemistry, Mathematics, and Biology, preparing them for future competitive exams.
                   </h4>
-                  <ul className="text-gray-600 space-y-2 pl-4">
+                  <ul className="text-sm md:text-base text-gray-600 space-y-2 pl-4">
                     <li className="list-disc">Conceptual learning, Olympiads & NTSE prep</li>
                     <li className="list-disc">Exposure to problem-solving techniques.</li>
                     <li className="list-disc">Preparation for Olympiads and NTSE examinations.</li>
@@ -371,15 +372,15 @@ export default function LandingPage() {
               </TabsContent>
 
               <TabsContent value="foundation">
-                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <BookCheck className="h-16 w-16 text-accent2" />
+                <Card className="p-4 mt-20 md:p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-4 md:mb-6">
+                    <BookCheck className="h-12 w-12 md:h-16 md:w-16 text-accent2 mx-auto" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-primary">Foundation Course</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">Foundation Course</h3>
+                  <h4 className="text-base md:text-lg font-semibold mb-4 text-accent1">
                     Aimed at students in classes 11 and 12, this course integrates the board syllabus with advanced topics, equipping students for competitive exams like JEE (Main/Advanced), NEET, and CUET.
                   </h4>
-                  <ul className="text-gray-600 space-y-2 pl-4">
+                  <ul className="text-sm md:text-base text-gray-600 space-y-2 pl-4">
                     <li className="list-disc">Comprehensive coverage of both board and competitive exam syllabi.</li>
                     <li className="list-disc">Regular assessments and mock tests.</li>
                     <li className="list-disc">Personalized mentorship and doubt-clearing sessions.</li>
@@ -388,15 +389,15 @@ export default function LandingPage() {
               </TabsContent>
 
               <TabsContent value="fresher">
-                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <Brain className="h-16 w-16 text-accent3" />
+                <Card className="p-4 mt-20 md:p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-4 md:mb-6">
+                    <Brain className="h-12 w-12 md:h-16 md:w-16 text-accent3 mx-auto" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-primary">Fresher Course</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">Fresher Course</h3>
+                  <h4 className="text-base md:text-lg font-semibold mb-4 text-accent1">
                     Tailored for students who have recently completed their class 12 exams and are preparing for their first attempt at competitive exams. This intensive curriculum bridges gaps and enhances understanding.
                   </h4>
-                  <ul className="text-gray-600 space-y-2 pl-4">
+                  <ul className="text-sm md:text-base text-gray-600 space-y-2 pl-4">
                     <li className="list-disc">Focused preparation for JEE, NEET, and other entrance exams.</li>
                     <li className="list-disc">In-depth concept clarification and application.</li>
                     <li className="list-disc">Time management and exam strategy sessions.</li>
@@ -405,15 +406,15 @@ export default function LandingPage() {
               </TabsContent>
 
               <TabsContent value="dropper">
-                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <Target className="h-16 w-16 text-accent4" />
+                <Card className="p-4 mt-20 md:p-8  card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-4 md:mb-6">
+                    <Target className="h-12 w-12 md:h-16 md:w-16 text-accent4 mx-auto" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-primary">Dropper Course</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">Dropper Course</h3>
+                  <h4 className="text-base md:text-lg font-semibold mb-4 text-accent1">
                     A one-year program designed for students who have completed their 12th-grade exams but wish to dedicate an additional year to improve their scores in competitive exams like JEE and NEET.
                   </h4>
-                  <ul className="text-gray-600 space-y-2 pl-4">
+                  <ul className="text-sm md:text-base text-gray-600 space-y-2 pl-4">
                     <li className="list-disc">Expert faculty with extensive experience in competitive exam coaching.</li>
                     <li className="list-disc">Regular mock tests to simulate exam conditions and track progress.</li>
                     <li className="list-disc">Personalized attention and doubt-clearing sessions to address individual challenges.</li>
@@ -422,15 +423,15 @@ export default function LandingPage() {
               </TabsContent>
 
               <TabsContent value="crash">
-                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <Rocket className="h-16 w-16 text-accent1" />
+                <Card className="p-4 mt-20 md:p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-4 md:mb-6">
+                    <Rocket className="h-12 w-12 md:h-16 md:w-16 text-accent1 mx-auto" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-primary">Crash Course</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">Crash Course</h3>
+                  <h4 className="text-base md:text-lg font-semibold mb-4 text-accent1">
                     An intensive short-term program aimed at thorough revision and practice before the examination season. Ideal for students seeking to consolidate their knowledge and boost their confidence
                   </h4>
-                  <ul className="text-gray-600 space-y-2 pl-4">
+                  <ul className="text-sm md:text-base text-gray-600 space-y-2 pl-4">
                     <li className="list-disc">Rapid coverage of key topics and concepts.</li>
                     <li className="list-disc">Extensive practice through mock tests and previous years' question papers.</li>
                     <li className="list-disc">Strategies for effective time management during exams.</li>
@@ -439,15 +440,15 @@ export default function LandingPage() {
               </TabsContent>
 
               <TabsContent value="capsule">
-                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <Rocket className="h-16 w-16 text-accent1" />
+                <Card className="p-4 mt-20 md:p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-4 md:mb-6">
+                    <Rocket className="h-12 w-12 md:h-16 md:w-16 text-accent1 mx-auto" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-primary">Capsule Course</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">Capsule Course</h3>
+                  <h4 className="text-base md:text-lg font-semibold mb-4 text-accent1">
                     A focused program designed to provide in-depth coverage of specific subjects or topics within a limited timeframe, catering to students who need targeted assistance.
                   </h4>
-                  <ul className="text-gray-600 space-y-2 pl-4">
+                  <ul className="text-sm md:text-base text-gray-600 space-y-2 pl-4">
                     <li className="list-disc">Concentrated study sessions on selected topics.</li>
                     <li className="list-disc">Interactive classes with an emphasis on problem-solving.</li>
                     <li className="list-disc">Ideal for students looking to strengthen particular areas of weakness</li>
@@ -456,15 +457,15 @@ export default function LandingPage() {
               </TabsContent>
 
               <TabsContent value="cuet">
-                <Card className="p-8 card-hover bg-white/80 backdrop-blur-sm">
-                  <div className="mb-6">
-                    <FileText className="h-16 w-16 text-accent2" />
+                <Card className="p-4 mt-20 md:p-8 card-hover bg-white/80 backdrop-blur-sm">
+                  <div className="mb-4 md:mb-6">
+                    <FileText className="h-12 w-12 md:h-16 md:w-16 text-accent2 mx-auto" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-primary">CUET Preparation</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-accent1">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-primary">CUET Preparation</h3>
+                  <h4 className="text-base md:text-lg font-semibold mb-4 text-accent1">
                     A structured coaching program designed to help students excel in CUET, ensuring admission to top central universities.
                   </h4>
-                  <ul className="text-gray-600 space-y-2 pl-4">
+                  <ul className="text-sm md:text-base text-gray-600 space-y-2 pl-4">
                     <li className="list-disc">Comprehensive subject coverage with expert guidance.</li>
                     <li className="list-disc">Strategic test preparation with mock exams and practice sessions.</li>
                     <li className="list-disc">Personalized mentoring to enhance problem-solving and time management skills.</li>
@@ -478,16 +479,25 @@ export default function LandingPage() {
       {/* Section SPM & Lalans*/}
 
       <section className="py-20 bg-gradient-to-br px-6 from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-6  bg-amber-100 py-10 rounded-2xl">
-          <div className="flex flex-col gap-10 text-xl font-medium">
-            <p>
-              At <strong>SPM & LALAN's</strong> Coaching, we are committed to
+        <div className="container mx-auto px-6  backdrop-blur-sm py-12 rounded-2xl shadow-lg">
+          <div className="flex flex-col items-center gap-10 text-xl font-medium">
+            <div className="flex items-center gap-4">
+              <GraduationCap className="h-12 w-12 text-primary" />
+              <h2 className="text-2xl md:text-3xl font-bold text-primary">Welcome to Excellence</h2>
+            </div>
+            <p className="text-center max-w-3xl">
+              At <strong className="text-primary">SPM & LALAN's</strong> Coaching, we are committed to
               providing comprehensive programs that cater to the diverse needs
               of our students. In addition to our core offerings, we are proud
               to introduce the following specialized programs:​
             </p>
-            <Button className="text-white w-fit mx-auto">Apply Now!</Button>
-            {/* CTA Button to be added */}
+            <div className="flex items-center gap-4">
+              <Button className="text-white w-fit group flex items-center gap-2 bg-primary hover:bg-primary/90 transition-all">
+                <UserPlus className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                Apply Now!
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>

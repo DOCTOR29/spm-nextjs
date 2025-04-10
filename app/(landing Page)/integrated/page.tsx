@@ -70,7 +70,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white pt-32 pb-20">
+      {/* <section className="bg-gradient-to-b from-indigo-900 to-blue-800 text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Best Coaching for NEET and JEE in Guwahati</h1>
           <p className="text-2xl md:text-3xl font-semibold mb-4 text-yellow-400">Your Success Begins Here</p>
@@ -83,12 +83,10 @@ function App() {
             <a href="#contact" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-3 rounded-md transition-colors text-lg">
               Book Free Counselling
             </a>
-            {/* <a href="#courses" className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md transition-colors text-lg">
-              Explore Courses
-            </a> */}
+          
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
@@ -358,6 +356,18 @@ function App() {
             <CarouselDemo />
           </div>
 </section>
+
+
+ {/* Teacher List */}
+ <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
+        <div className="container mx-auto px-6 relative flex flex-col items-center">
+          <div className="max-w-6xl gradient-text text-3xl md:text-6xl py-10 md:py-20 font-bold mx-auto text-center">
+            Guiding Minds, Shaping Futures – Meet Our Expert Faculties at SPM &
+            Lalan's
+          </div>
+          <EmblaCarousel slides={teachers} teacher={true} options={OPTIONS} />
+        </div>
+</section>
       {/* FAQs Section */}
       <section id="faqs" className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -393,27 +403,14 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-white">
+      {/* <section id="contact" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold ">Get in Touch</h3>
-              {/* <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-blue-600 mr-4" />
-                  <span>+91 1234567890</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-blue-600 mr-4" />
-                  <span>info@spmandlalans.com</span>
-                </div>
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-blue-600 mr-4 mt-1" />
-                  <span>123 Education Hub, Guwahati, Assam</span>
-                </div>
-              </div> */}
+
             </div>
             
             <form className="space-y-6">
@@ -435,7 +432,7 @@ function App() {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       {/* <footer className="bg-gray-900 text-white py-12">

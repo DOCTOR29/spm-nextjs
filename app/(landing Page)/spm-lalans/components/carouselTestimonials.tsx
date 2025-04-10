@@ -20,15 +20,15 @@ export function CarouselDemo() {
       <CarouselContent>
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={index} className="md:basis-1/3    basis ">
-            <div className="p-10   md:w-[400px]">
+            <div className="p-2   md:w-[400px]">
               <Card>
 
                 <CardContent className="flex  flex-col  aspect-square items-center justify-center p-6">
                 <CardHeader>
        <img src={testimonial.image} className="w-20" alt="" />
       </CardHeader>
-                  <span className="text-xl font-semibold">{testimonial.name}</span>
-                  <p className="z-50 cursor-pointer" ><ReadMore id={""} text={testimonial.testimonial}  / > </p>
+                  <span className="text-xl font-semibold break-words">{testimonial.name}</span>
+                  <p className="z-50 cursor-pointer break-words whitespace-normal" ><ReadMore id={""} text={testimonial.testimonial}  / > </p>
                 </CardContent>
               </Card>
             </div>

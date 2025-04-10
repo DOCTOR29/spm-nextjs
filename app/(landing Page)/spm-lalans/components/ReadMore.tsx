@@ -23,19 +23,19 @@ export const ReadMore = ({ id, text, amountOfWords = 26 }: ReadMoreProps) => {
   }
 
   return (
-    <p id={id}>
+    <p id={id} className="break-words whitespace-pre-wrap text-sm md:text-base">
       {beginText}
       {itCanOverflow && (
         <>
           {!isExpanded && <span>... </span>}
           <span 
-            className={`${!isExpanded && 'hidden'} `} 
+            className={`${!isExpanded && 'hidden'} break-words whitespace-pre-wrap`}
             aria-hidden={!isExpanded}
           >
             {endText}
           </span>
           <span
-            className='text-violet-400 ml-2'
+            className='text-violet-400 ml-2 cursor-pointer hover:text-violet-600'
             role="button"
             tabIndex={0}
             aria-expanded={isExpanded}

@@ -375,10 +375,10 @@ function App() {
         </div>
       </section>
 {/* Student Testimonial */}
-<section id="testimonial" className="py-16 bg-white">
+<section id="testimonial" className="md:py-5 py-0 bg-white">
 
-        <div className="text-center mt-8 flex flex-col items-center justify-center">
-            <h1 className="text-4xl pt-25 gradient-text font-bold">
+        <div className="text-center  flex flex-col items-center justify-center">
+            <h1 className="text-4xl md:pt-25 pt-10 gradient-text font-bold">
               Topper&apos;s Speak
             </h1>
 

@@ -50,7 +50,7 @@ import EmblaCarousel from "./components/EmblaCorousel";
 import { EmblaOptionsType } from "embla-carousel";
 import { ReadMore } from "./components/ReadMore";
 import { CarouselDemo } from "./components/carouselTestimonials";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Hero from "./components/Hero";
 import { useSearchParams } from "next/navigation";
@@ -79,7 +79,8 @@ const topper = [
   "./Topper/8.png",
 ];
 
-export default function LandingPage() {
+// Create a client component that uses useSearchParams
+function LandingPageContent() {
   const [isReadMore, setisReadMore] = useState(false);
   const [isReadMoreSuper, setisReadMoreSuper] = useState(false);
   
@@ -599,5 +600,14 @@ export default function LandingPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+// Main component that wraps the content in Suspense
+export default function LandingPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LandingPageContent />
+    </Suspense>
   );
 }

@@ -23,7 +23,7 @@ import { ReadMore } from "./components/ReadMore";
 import { CarouselDemo } from "./components/carouselTestimonials";
 const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
- const urlAnchor = "https://spmandlalans.com/lp/integrated/#apply-form"
+const urlAnchor = "https://spmandlalans.com/lp/integrated/#apply-form"
 const teachers = [
   "./Teacher/1.webp",
   "./Teacher/2.webp",
@@ -133,21 +133,25 @@ function App() {
               <p className="text-gray-600">Smart classrooms, labs, and hostel facilities.</p>
               
             </div>
-            <section className="section-pattern py-20">
-        
-      </section>
+           
       <section>
         
       </section>
             
           </div>
           
+          <div className="text-center mt-8">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+              Book Free Counselling Session
+            </a>
+          </div>
+
         </div>
       
       </section>
 
       {/* student Result */}
-<section className='py-26 bg-gray-50'>
+<section className='md:py-26 py-10 bg-amber-50/70'>
 
 <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">
@@ -196,12 +200,18 @@ function App() {
               <p className="text-gray-600">Success Rate</p>
             </Card> */}
           {/* </div> */}
+          
+          <div className="text-center mt-8">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+              Book Free Counselling Session
+            </a>
+          </div>
          
         </div>
 </section>
 
       {/* How It Works Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 md:py-26 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -237,6 +247,13 @@ function App() {
               <p className="text-gray-600">Achieve top ranks in competitive exams.</p>
             </div>
           </div>
+
+          <div className="text-center mt-8">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+              Book Free Counselling Session
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -300,6 +317,13 @@ function App() {
               </ul>
             </div>
           </div>
+
+          <div className="text-center mt-8">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+              Book Free Counselling Session
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -341,6 +365,13 @@ function App() {
               <p className="text-gray-600">For meritorious students</p>
             </div>
           </div>
+
+          <div className="text-center mt-8">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+              Book Free Counselling Session
+            </a>
+          </div>
+
         </div>
       </section>
 {/* Student Testimonial */}
@@ -354,6 +385,12 @@ function App() {
             {/* <EmblaCarousel slides={testimonials} options={OPTIONS} /> */}
 
             <CarouselDemo />
+
+            <div className="mt-8">
+              <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+                Book Free Counselling Session
+              </a>
+            </div>
           </div>
 </section>
 
@@ -366,6 +403,12 @@ function App() {
             Lalan's
           </div>
           <EmblaCarousel slides={teachers} teacher={true} options={OPTIONS} />
+
+          <div className="text-center mt-8">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+              Book Free Counselling Session
+            </a>
+          </div>
         </div>
 </section>
       {/* FAQs Section */}
@@ -389,6 +432,13 @@ function App() {
               <p className="text-gray-600">Register online or visit our center in Guwahati.</p>
             </div>
           </div>
+
+          <div className="text-center mt-8">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+              Book Free Counselling Session
+            </a>
+          </div>
+
         </div>
       </section>
 

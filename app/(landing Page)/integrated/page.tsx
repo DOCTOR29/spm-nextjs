@@ -202,7 +202,7 @@ function App() {
           {/* </div> */}
           
           <div className="text-center mt-8">
-            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+          <a href={urlAnchor} target="_parent" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-md transition-colors text-lg">
               Book Free Counselling Session
             </a>
           </div>
@@ -319,7 +319,7 @@ function App() {
           </div>
 
           <div className="text-center mt-8">
-            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+          <a href={urlAnchor} target="_parent" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-md transition-colors text-lg">
               Book Free Counselling Session
             </a>
           </div>
@@ -367,7 +367,7 @@ function App() {
           </div>
 
           <div className="text-center mt-8">
-            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 font-bold px-8 py-4 rounded-md transition-colors text-lg">
               Book Free Counselling Session
             </a>
           </div>
@@ -375,10 +375,10 @@ function App() {
         </div>
       </section>
 {/* Student Testimonial */}
-<section id="testimonial" className="md:py-5 py-0 bg-white">
+<section id="testimonial" className="py-16 bg-white">
 
-        <div className="text-center  flex flex-col items-center justify-center">
-            <h1 className="text-4xl md:pt-25 pt-10 gradient-text font-bold">
+        <div className="text-center mt-8 flex flex-col items-center justify-center">
+            <h1 className="text-4xl mdpt-25 gradient-text font-bold">
               Topper&apos;s Speak
             </h1>
 
@@ -387,7 +387,7 @@ function App() {
             <CarouselDemo />
 
             <div className="mt-8">
-              <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+            <a href={urlAnchor} target="_parent" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-md transition-colors text-lg">
                 Book Free Counselling Session
               </a>
             </div>
@@ -405,7 +405,7 @@ function App() {
           <EmblaCarousel slides={teachers} teacher={true} options={OPTIONS} />
 
           <div className="text-center mt-8">
-            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+             <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600  font-bold px-8 py-4 rounded-md transition-colors text-lg">
               Book Free Counselling Session
             </a>
           </div>
@@ -434,7 +434,7 @@ function App() {
           </div>
 
           <div className="text-center mt-8">
-            <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+          <a href={urlAnchor} target="_parent" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-md transition-colors text-lg">
               Book Free Counselling Session
             </a>
           </div>
@@ -446,7 +446,7 @@ function App() {
       {/* <section className="py-16 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Start Your Journey?</h2>
-          <a href={urlAnchor} target="_parent" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-8 py-4 rounded-md transition-colors text-lg">
+           <a href={urlAnchor} target="_parent" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-md transition-colors text-lg">
             Book Free Counselling Session
           </a>
         </div>

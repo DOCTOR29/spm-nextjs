@@ -426,9 +426,6 @@ function LandingPageContent() {
                 Apply Now!
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button className="bg-secondary text-blue-600 hover:bg-secondary/90 transition-all">
-                Book Free Counselling Session
-              </Button>
             </div>
           </div>
         </div>
@@ -580,9 +577,6 @@ function LandingPageContent() {
               <Button className="bg-secondary text-blue-600 hover:bg-secondary/90">
                 Apply for Super 30
               </Button>
-              <Button className="bg-primary text-white hover:bg-primary/90 mt-4">
-                Book Free Counselling Session
-              </Button>
             </div>
           </div>
         </div>
@@ -611,9 +605,6 @@ function LandingPageContent() {
           </p>
           <Button className="bg-secondary text-blue-600 hover:bg-secondary/90 text-lg px-8 py-6 shadow-glow">
             Apply Now
-          </Button>
-          <Button className="bg-primary text-white hover:bg-primary/90 text-lg px-8 py-6 shadow-glow mt-4">
-            Book Free Counselling Session
           </Button>
         </div>
       </section>
@@ -954,9 +945,6 @@ export default function LandingPage() {
                 Apply Now!
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button className="bg-secondary text-blue-600 hover:bg-secondary/90 transition-all">
-                Book Free Counselling Session
-              </Button>
             </div>
           </div>
         </div>
@@ -1108,9 +1096,6 @@ export default function LandingPage() {
               <Button className="bg-secondary text-blue-600 hover:bg-secondary/90">
                 Apply for Super 30
               </Button>
-              <Button className="bg-primary text-white hover:bg-primary/90 mt-4">
-                Book Free Counselling Session
-              </Button>
             </div>
           </div>
         </div>
@@ -1139,9 +1124,6 @@ export default function LandingPage() {
           </p>
           <Button className="bg-secondary text-blue-600 hover:bg-secondary/90 text-lg px-8 py-6 shadow-glow">
             Apply Now
-          </Button>
-          <Button className="bg-primary text-white hover:bg-primary/90 text-lg px-8 py-6 shadow-glow mt-4">
-            Book Free Counselling Session
           </Button>
         </div>
       </section>

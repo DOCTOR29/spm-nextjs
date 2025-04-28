@@ -79,7 +79,7 @@ const WhyChooseUs: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-[#184587] via-[#F4D605] to-[#184587] bg-clip-text text-transparent animate-gradient">
-              Why Choose PM & LALAN'S for NEET Preparation?
+              Why Choose SPM & LALAN'S for NEET Preparation?
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#184587] to-[#F4D605] mx-auto rounded-full"></div>

@@ -92,7 +92,7 @@ function HeroWrapper() {
 function LandingPageContent() {
   const [isReadMore, setisReadMore] = useState(false);
   const [isReadMoreSuper, setisReadMoreSuper] = useState(false);
-  
+
   // Get the wp parameter from the URL
   const searchParams = useSearchParams();
   const wp = searchParams.get('wp');

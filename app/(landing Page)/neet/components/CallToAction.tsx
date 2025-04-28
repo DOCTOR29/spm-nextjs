@@ -13,7 +13,7 @@ const CallToAction: React.FC = () => {
               Ready to Start Your <span className="text-[#F4D605]">Medical Journey</span>?
             </h2>
             <p className="text-white/80 text-lg max-w-xl">
-              Join PM & LALAN'S Coaching today and take the first step towards your successful medical career. Limited seats available!
+              Join SPM & LALAN'S Coaching today and take the first step towards your successful medical career. Limited seats available!
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">

@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    document.title = "PM & LALAN'S Coaching | Best NEET Coaching in Guwahati";
+    document.title = "SPM & LALAN'S Coaching | Best NEET Coaching in Guwahati";
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

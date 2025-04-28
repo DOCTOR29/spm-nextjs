@@ -43,7 +43,7 @@ const Header: React.FC = () => {
             <BookOpen className="h-8 w-8 text-[#184587]" />
             <div className="ml-2">
               <h1 className="text-lg md:text-xl font-bold text-[#184587]">
-                PM & LALAN'S
+                SPM & LALAN'S
               </h1>
               <p className="text-xs text-[#184587]/80">NEET Coaching</p>
             </div>

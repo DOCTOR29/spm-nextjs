@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center mb-4">
               <BookOpen className="h-8 w-8 text-[#F4D605]" />
               <div className="ml-2">
-                <h3 className="text-xl font-bold">PM & LALAN'S</h3>
+                <h3 className="text-xl font-bold">SPM & LALAN'S</h3>
                 <p className="text-sm text-white/70">NEET Coaching</p>
               </div>
             </div>
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-white/70 text-sm">
-            &copy; {new Date().getFullYear()} PM & LALAN'S Coaching. All rights reserved.
+            &copy; {new Date().getFullYear()} SPM & LALAN'S Coaching. All rights reserved.
           </p>
         </div>
       </div>

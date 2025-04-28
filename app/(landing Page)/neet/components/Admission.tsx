@@ -63,7 +63,7 @@ const Admission: React.FC = () => {
             <h3 className="text-xl font-bold text-[#184587]">Begin Your Journey Toward Medical Success!</h3>
           </div>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join PM & LALAN'S Coaching and take the first step towards achieving your dream of becoming a doctor.
+            Join SPM & LALAN'S Coaching and take the first step towards achieving your dream of becoming a doctor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

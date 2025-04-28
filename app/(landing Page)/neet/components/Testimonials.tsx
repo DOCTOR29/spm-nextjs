@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
     {
       name: "Priya Sharma",
       qualification: "AIIMS Delhi, Batch of 2022",
-      message: "PM & LALAN'S Coaching transformed my NEET preparation with their structured approach and dedicated faculty. Their test series was particularly helpful in improving my score.",
+      message: "SPM & LALAN'S Coaching transformed my NEET preparation with their structured approach and dedicated faculty. Their test series was particularly helpful in improving my score.",
       rating: 5,
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },

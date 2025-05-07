@@ -23,7 +23,7 @@ import { ReadMore } from "./components/ReadMore";
 import { CarouselDemo } from "./components/carouselTestimonials";
 const OPTIONS: EmblaOptionsType = { containScroll: false };
 const SLIDE_COUNT = 5;
-const urlAnchor = "https://spmandlalans.com/lp/integrated/#apply-form"
+const urlAnchor = "https://spmandlalans.com/lp/neet-jee-integrated-coaching-for-class-x/#apply-form"
 const teachers = [
   "./Teacher/1.webp",
   "./Teacher/2.webp",

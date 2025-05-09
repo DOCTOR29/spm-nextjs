@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, ChevronRight } from 'lucide-react';
+import { anchor } from '../constants';
 
 const CallToAction: React.FC = () => {
   return (
@@ -18,19 +19,19 @@ const CallToAction: React.FC = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="#contact" 
+              href={anchor} 
               className="bg-[#F4D605] hover:bg-[#F4D605]/90 text-[#184587] font-bold py-3 px-6 rounded-md transition-all duration-300 text-center flex items-center justify-center"
             >
               Enroll Now
               <ChevronRight className="ml-1 h-5 w-5" />
             </a>
-            <a 
+            {/* <a 
               href="#contact" 
               className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-6 rounded-md transition-all duration-300 text-center flex items-center justify-center"
             >
               Book a Free Counseling
               <Calendar className="ml-1 h-5 w-5" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

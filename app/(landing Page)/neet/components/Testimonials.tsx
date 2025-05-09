@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import { CarouselDemo } from '../../integrated/components/carouselTestimonials';
 
 interface TestimonialProps {
   name: string;
@@ -75,8 +76,9 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
+        <CarouselDemo />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+          {/* {testimonials.map((testimonial, index) => (
             <TestimonialCard 
               key={index}
               name={testimonial.name}
@@ -85,7 +87,7 @@ const Testimonials: React.FC = () => {
               rating={testimonial.rating}
               image={testimonial.image}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </section>

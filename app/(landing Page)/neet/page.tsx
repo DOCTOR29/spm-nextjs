@@ -13,6 +13,7 @@ import Admission from './components/Admission';
 import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { CarouselDemo } from '../integrated/components/carouselTestimonials';
 
 function App() {
   useEffect(() => {
@@ -44,9 +45,10 @@ function App() {
         <Residential />
         <Facilities />
         <Testimonials />
-        <Admission />
+        
+        {/* <Admission /> */}
         <CallToAction />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       {/* <Footer /> */}
     </div>

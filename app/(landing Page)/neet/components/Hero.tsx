@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Award, Star, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react';
+import { anchor } from '../constants';
+
 
 const slides = [
   {
@@ -113,18 +115,18 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="#programs" 
+                  href={anchor}
                   className="bg-gradient-to-r from-[#FFD700] to-[#FFA500] hover:from-[#FFA500] hover:to-[#FFD700] text-[#184587] font-bold py-3 px-6 rounded-md transition-all duration-300 text-center flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
-                  Explore Programs
+                  Enroll Today
                   <ChevronRight className="ml-1 h-5 w-5" />
                 </a>
-                <a 
+                {/* <a 
                   href="#contact" 
                   className="bg-white hover:bg-white/90 text-[#184587] font-bold py-3 px-6 rounded-md transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Contact Us
-                </a>
+                </a> */}
               </div>
             </div>
           ))}

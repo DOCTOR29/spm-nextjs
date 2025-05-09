@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen, GraduationCap, Clock, Home, Users, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { anchor } from '../constants';
 
 interface ProgramProps {
   title: string;
@@ -59,10 +60,10 @@ const ProgramCard: React.FC<ProgramProps> = ({
 
         {/* CTA Button */}
         <a 
-          href="#contact" 
+          href={anchor}
           className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all duration-300 group-hover:translate-x-1"
         >
-          Learn More
+          Enroll Now
           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
         </a>
       </div>

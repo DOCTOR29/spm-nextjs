@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="grid md:grid-cols-2">
+          <div className="grid md:grid-cols-1">
             <div className="p-6 md:p-8 lg:p-10">
               <h3 className="text-xl font-bold text-[#184587] mb-6">Send Us a Message</h3>
               <form className="space-y-4">
@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             </div>
-            <div className="bg-[#184587] text-white p-6 md:p-8 lg:p-10">
+            {/* <div className="bg-[#184587] text-white p-6 md:p-8 lg:p-10">
               <h3 className="text-xl font-bold mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

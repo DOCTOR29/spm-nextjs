@@ -1,5 +1,6 @@
 "use client"
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Programs from './components/Programs';
@@ -16,23 +17,23 @@ import Footer from './components/Footer';
 import { CarouselDemo } from '../integrated/components/carouselTestimonials';
 
 function App() {
-  useEffect(() => {
-    document.title = "SPM & LALAN'S Coaching | Best JEE Coaching in Guwahati";
+//   useEffect(() => {
+//     document.title = "SPM & LALAN'S Coaching | Best JEE Coaching in Guwahati";
     
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href') as string);
-        if (target) {
-          window.scrollTo({
-            top: (target as HTMLElement).offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  }, []);
+//     // Smooth scrolling for anchor links
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//       anchor.addEventListener('click', function(e) {
+//         e.preventDefault();
+//         const target = document.querySelector(this.getAttribute('href') as string);
+//         if (target) {
+//           window.scrollTo({
+//             top: (target as HTMLElement).offsetTop - 80,
+//             behavior: 'smooth'
+//           });
+//         }
+//       });
+//     });
+//   }, []);
 
   return (
     <div className="font-sans">

@@ -16,7 +16,7 @@ export function CarouselDemo() {
         Autoplay({
           delay: 2000,
         }),
-      ]} className="w-full max-w-7xl">
+      ]} className="w-full m-auto max-w-7xl">
       <CarouselContent>
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={index} className="md:basis-1/3    basis ">

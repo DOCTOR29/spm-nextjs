@@ -11,10 +11,10 @@ const CallToAction: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="mb-8 lg:mb-0 lg:mr-8 text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-              Ready to Start Your <span className="text-[#F4D605]">Medical Journey</span>?
+              Ready to Start Your <span className="text-[#F4D605]">Engineering Journey</span>?
             </h2>
             <p className="text-white/80 text-lg max-w-xl">
-              Join PM & LALAN'S Coaching today and take the first step towards your successful medical career. Limited seats available!
+              Join SPM & LALAN'S Coaching today and take the first step towards your successful medical career. Limited seats available!
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">

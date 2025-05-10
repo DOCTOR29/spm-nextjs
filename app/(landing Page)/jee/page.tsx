@@ -45,8 +45,8 @@ function App() {
         <Results />
         <Residential />
         <Facilities />
-        <CarouselDemo />
-        {/* <Testimonials /> */}
+        {/* <CarouselDemo /> */}
+        <Testimonials />
         {/* <Admission /> */}
         <FAQ />
         <CallToAction />
